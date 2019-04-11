@@ -1,0 +1,77 @@
+{% load static %}
+{% load link_holders %}
+<div class="box_background" id="service">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-1">
+                <div class="left_line_headline"></div>
+            </div>
+
+            <div class="col-xl-6">
+                <p class="headline_text">
+                    Услуги центра
+                </p>
+                <p class="subtitle">
+                    Вы можете подробнее ознакомиться с основными направлениями деятельности нашего центра
+                </p>
+            </div>
+        </div>
+
+        <div class="row" id="service">
+            {% for publ in publications %}
+            <div class="col-sm-6 col-xl-4">
+                <div class="box_img_service" style="background: url({{ publ.photo }}) no-repeat;">
+                    <a data-fancybox="" data-src="#trueModal{{ publ.post.pk }}" data-modal="true" class="service_link">
+                        <div class="box_content">
+                            <p class="name_service">
+                                {{ publ.post.title }}
+                            </p>
+                            <div class="line_service_yellow"></div>
+                            <button class="more">
+                                <a data-fancybox="" data-src="#trueModal{{ publ.post.pk }}" data-modal="true"
+                                    class="more_button">
+                                    Подробнее
+                                </a>
+                            </button>
+                        </div>
+                </div>
+                </a>
+                <div class="box_head_serivce">
+                    <p class="info_text_service">
+                        {% comment %} {{ post.text|safe}} {% endcomment %}
+                    </p>
+                    {% include 'mainapp/includes/detail_service.html' %}
+                </div>
+
+            </div>
+            {% endfor %}
+            <div class="col-sm-6 col-xl-4">
+                <a href="{% url 'ocenka_details' %}#ocenka"  class="service_link">
+                <div class="box_img_service_ocenka">
+                        <div class="box_content">
+                            <p class="name_service">
+                               Центр оценки <br> квалификаций
+                            </p>
+                            <div class="line_service_yellow"></div>
+                            <button class="more">
+                              <a href="{% url 'ocenka_details' %}#ocenka" class="more_button">
+                                  Подробнее
+                              </a>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="box_head_serivce">
+                    <p class="info_text_service">
+
+                    </p>
+                    {% include 'mainapp/includes/detail_service.html' %}
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

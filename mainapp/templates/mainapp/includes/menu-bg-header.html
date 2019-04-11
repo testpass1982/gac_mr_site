@@ -1,0 +1,77 @@
+{% load link_holders %}
+<div class="row align-items-center">
+
+    <div class="col-xl-12 no-otstup">
+        <div class="menu__background">
+            <div class="menu__navbar">
+                <!--Navbar-->
+                <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+
+                    <!-- Navbar brand -->
+
+                    <!-- Collapse button -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Collapsible content -->
+                    <div class="collapse navbar-collapse" id="basicExampleNav">
+
+                        <!-- Links -->
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'index' %}">Главная
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+
+                            <!-- Dropdown -->
+                            <li class="nav-item active">
+                                <a class="nav-link{% if request.resolver_match.url_name == 'index' %} smoothScroll{% endif %}"
+                                    href="{% if request.resolver_match.url_name == 'index' %}#center{% else %}{% url 'index' %}#center{% endif %}">Центр
+                                    аттестации
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link{% if request.resolver_match.url_name == 'index' %} smoothScroll{% endif %}"
+                                    href="{% if request.resolver_match.url_name == 'index' %}#service{% else %}{% url 'index' %}#service{% endif %}">Услуги
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'doc' %}">Документы
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'reestr' %}">Реестр САСв
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link{% if request.resolver_match.url_name == 'index' %} smoothScroll{% endif %}"
+                                    href="{% if request.resolver_match.url_name == 'index' %}#contact{% else %}{% url 'index' %}#contact{% endif %}">Контакты
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="header_phone_mob">
+                        <a href="tel: 8(347) 246-87-26" title="Позвонить">
+                            <p class="text_phone_mob">
+                                <img src="/static/img/phone.png" alt="">
+                            </p>
+                        </a>                       
+                    </div>
+                </nav>
+
+                <!--/.Navbar-->
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,117 @@
+.box_contacti_background {
+    background: url(/static/img/contacti.png) no-repeat;
+    background-size: cover;
+}
+
+.box_contacti_color {
+    background-color: rgba(38, 37, 34, 0.8);
+    padding: 50px 0px 50px;
+    @media screen and (max-width: 435px) {
+        padding: 25px 0px 25px;   
+      }
+    @media screen and (max-width: 992px) {
+        text-align: center;  
+      }
+}
+
+.box_contacti_number {
+    margin-bottom: 45px;
+}
+
+.contacti_number::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+    margin-left: -35px;
+    background: url(/static/img/phone.png) center 0 no-repeat;
+}
+
+.contacti_consultant {
+    font-size: 16px;
+    font-weight: 350;
+    color: #fff;
+    padding-left: 35px;
+    margin-top: -15px;
+}
+
+
+.map{
+    @media screen and (max-width: 1199px) {
+        margin-top: 15px;
+
+    }
+}
+
+.info_organization{
+    font-size: 22px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 15px;
+   
+}
+
+.sub-information_organization{
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;   
+    margin-bottom: 15px;
+}
+
+
+.contacti_number {
+    font-size: 26px;
+    font-weight: 400;
+    color: #fff;
+    padding-left: 35px;
+}
+
+.contacti_adres_text::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    margin-top: 7px;
+    margin-left: -35px;
+    background: url(/static/img/here.png) center 0 no-repeat;
+}
+
+.contacti_adres_text {
+    font-size: 16px;
+    font-weight: 350;
+    color: #fff;
+    padding-left: 35px;
+    }
+
+
+.contacti_mail::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    margin-top: 7px;
+    margin-left: -35px;
+    background: url(/static/img/mail.png) center 0 no-repeat;
+}
+
+.contacti_mail {
+    font-size: 16px;
+    font-weight: 350;
+    color: #fff;
+    padding-left: 35px;
+    margin-top: -15px;
+
+    @media screen and (max-width: 435px) {
+        margin-bottom: 15px;
+    }
+}
+
+.box_mail a{
+    text-decoration: none;
+    &:hover{
+        color: #b9b9b9;
+    }
+}
+
+

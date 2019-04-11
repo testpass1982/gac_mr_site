@@ -1,0 +1,115 @@
+.headline_center{
+    font-size: 20px;
+    font-weight: 450;
+    color: #000;
+}
+
+.org_naks{
+    padding: 10px 20px;
+    background-color: #50b3ff11;
+    font-size: 16px;
+    color: #000;
+    
+}
+
+.small_text_center{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #000;
+}
+
+.card .btn{
+text-decoration: none;
+color: #000;
+font-size: 20px;
+@media screen and (max-width: 320px) {
+   font-size: 12px;
+}
+}
+
+.headline_personal{
+    font-size: 18px;
+    font-weight: 450;
+    margin-top: 35px;
+    color: #0b3f8d;
+}
+
+.box_personal{
+    padding: 15px 25px;
+    margin-bottom: 10px;
+    border-left: 1px solid #50b3ff;
+    &:hover{
+        transition: 0.2s;
+        margin-left: 5px;
+    }
+}
+
+.name_personal{
+    font-size: 16px;
+    font-weight: 450;
+    color: #000;
+    line-height: 1.6;
+    margin-bottom: 2px;  
+     
+}
+
+.position_personal{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.phone_personal{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+
+.img_center{
+    width: 240px;
+    height: 160px;
+    margin-bottom: 10px;
+    @media screen and (max-width: 320px) {
+        width: 100%;
+        height: 100%;
+     }
+    &:hover{
+        
+        transition: 0.2s;
+        -moz-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        -webkit-transition: all 0.2s ease-out;
+        -webkit-transform: scale(1.01);
+        -moz-transform: scale(1.01);
+        -o-transform: scale(1.01);
+    }
+}
+
+.nav-tabs .nav-link{
+    border: 0px;
+    border-bottom: 0px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    @media screen and (max-width: 320px) {
+      font-size: 12px;
+      margin-bottom: 5px;
+     }
+    &:focus{
+        color: rgb(90, 90, 90);
+    }
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link{
+    border: 0px;
+    border-bottom: 0px;
+}
+
+.nav-tabs{
+    border: 0px;
+}
+
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus{
+    color: rgb(90, 90, 90);
+}

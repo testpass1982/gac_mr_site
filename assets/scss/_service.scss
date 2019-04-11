@@ -1,0 +1,193 @@
+.box_white_background {
+    background-color: #fff;
+    padding: 50px 0px 50px;
+
+    @media screen and (max-width: 435px) {
+        padding: 25px 0px 25px;
+    }
+}
+
+.headline_text {
+    font-size: 45px;
+    color: #39567e;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+
+    @media screen and (max-width: 435px) {
+        margin-top: 15px;
+        font-size: 30px
+    }
+}
+
+
+// img
+
+.box_img_service_ocenka{
+    background: url(/static/img/img_ocenka.jpg) ;
+}
+
+.box_img_service_ocenka:hover .more {
+    opacity: 1;
+    margin-top: 15px;
+    transition: 0.2s;
+
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
+}
+
+.box_img_service_ocenka {
+    margin-bottom: 25px;
+  
+    background-size: cover;
+    cursor: pointer;
+
+    a {
+        text-decoration: none;
+    }
+    &:hover {
+        -moz-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        -webkit-transition: all 0.2s ease-out;
+        -webkit-transform: scale(1.01);
+        -moz-transform: scale(1.01);
+        -o-transform: scale(1.01);
+    }
+
+    @media screen and (max-width: 435px) {
+        margin-top: 10px;
+        margin-bottom: 15px;
+    
+    }
+}
+
+
+
+.box_img_service:hover .more {
+    opacity: 1;
+    margin-top: 15px;
+    transition: 0.2s;
+
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
+}
+
+.box_img_service {
+    margin-bottom: 25px;
+  
+    background-size: cover;
+    cursor: pointer;
+
+    a {
+        text-decoration: none;
+    }
+    &:hover {
+        -moz-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        -webkit-transition: all 0.2s ease-out;
+        -webkit-transform: scale(1.01);
+        -moz-transform: scale(1.01);
+        -o-transform: scale(1.01);
+    }
+
+    @media screen and (max-width: 435px) {
+        margin-top: 10px;
+        margin-bottom: 15px;
+    
+    }
+}
+
+
+.box_content {
+    background-color: #212944a4;
+    padding: 100px 25px 65px 45px;
+    height: 50%;
+
+    @media screen and (max-width: 435px) {
+        padding: 25px 15px 25px 25px;
+    }
+
+}
+
+.name_service {
+    font-size: 26px;  
+    color: #fff;
+    font-weight: 450;    
+    @media screen and (max-width: 1200px) {
+        font-size: 20px;        
+        line-height: 1.8;
+    }
+
+}
+
+
+.line_service_yellow {
+    border: 0.5px solid #ffbd3d;
+    width: 50%;
+    margin-bottom: 5px;
+
+    @media screen and (max-width: 435px) {
+        width: 50%;
+    }
+}
+
+.head_service {
+    font-size: 22px;
+    font-weight: 450;
+    color: #000;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    @media screen and (max-width: 435px) {
+        font-size: 16px;
+        margin-top: 5px;
+    }
+}
+
+.info_text_service {
+    font-size: 16px;
+    line-height: 1.8;
+
+    @media screen and (max-width: 435px) {
+        font-size: 14px;
+    }
+}
+
+
+
+.more {
+    opacity: 0;
+    background: transparent;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 25px;
+    margin-bottom: 0px;
+    position: absolute;
+
+    a {
+        text-decoration: none;
+        color: #000;
+        font-size: 16px;
+        font-weight: 450;
+    }
+}
+
+
+.more_button {
+    background-color: #e9b754;
+    padding: 10px 25px;
+    color: #000;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #f7c664;
+        transition: 0.3s;
+    }
+
+}
+
+.close_modal {
+    cursor: pointer;
+}

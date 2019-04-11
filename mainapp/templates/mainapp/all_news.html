@@ -1,0 +1,49 @@
+{% extends 'mainapp/index.html' %}
+{% load static %}
+{% load link_holders %}
+{% block content %}
+<div class="box_inside_pages" id="all_news">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-xl-1">
+                <div class="headline_inside_pages_line"></div>
+            </div>
+
+            <div class="col-xl-6">
+                <p class="headline_inside_pages_text">
+                    Все новости
+                </p>
+                <p class="subtitle_inside_pages">
+                    События нашей организации
+                </p>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-xl-1">
+            </div>
+            <div class="col-xl-9">
+                <div class="row">
+                    {% for post in news %}
+                    <div class="col-xl-4">
+                        <div class="link__read__news__inside">
+                            <div class="block__news">
+                                <a href="{% url 'index' %}#head__page" class="link__news"></a>
+                                    <p class="data__news__main">{{ post.published_date|date:"d M. Y"}}</p>
+                                <div class="box__news mt-1">
+                                    <p class="box__news__text">
+                                        {{ post.title }}</p>
+                                </div>
+                                </a> </a>
+                                <button class="read_news mt-2">
+                                    <a href="{% url 'details' 'post' post.pk %}" class="read_news_text">Читать</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+    </div>
+</div>
+{% endblock %}

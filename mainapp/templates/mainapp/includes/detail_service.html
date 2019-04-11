@@ -1,0 +1,28 @@
+{% load static %}
+{% load link_holders %}
+<div id="trueModal{{ publ.post.pk }}" style="display: none; max-width: 1200px;">
+        <div class="row align-items-center">
+                <div class="col-xl-12">
+                        <div class="caption_in_modal_window">
+                                <div data-fancybox-close="">
+                                        <img src="{% static '/img/close__icon-01.png' %}"
+                                                class="close_modal float-right mt-1" title="Закрыть" alt="">
+                                </div>
+                                {{ publ.post.title }}
+                        </div>
+                </div>
+        </div>
+        <div class="row">
+                <div class="col-xl-12">
+                        <div class="text_in_a_modal_window">
+                                {{ publ.post.text|safe}}
+                        </div>
+                        <div class="line_modal_info"></div>
+                        <button class="request">
+                                <a href="" data-toggle="modal" data-target="#modal-statement"
+                                        class="request_button">Подать
+                                        заявку</a>
+                        </button>
+                </div>
+        </div>
+</div>

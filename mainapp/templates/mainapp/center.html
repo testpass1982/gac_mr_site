@@ -1,0 +1,375 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+{% load link_holders %}
+{% block content %}
+<div class="box_inside_pages" id="news">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-1">
+        <div class="headline_inside_pages_line"></div>
+      </div>
+
+      <div class="col-xl-6">
+        <p class="headline_inside_pages_text" id="#reestr">
+          О центре аттестациии
+        </p>
+        <p class="subtitle_inside_pages">
+          Группа компаний
+        </p>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-xl-6">
+        <div class="block_center_gac_rb">
+          <p class="headline_center">
+            ООО "АЦ СТС" Аттестационный Центр СваркаТехСервис
+          </p>
+          <p class="org_naks">
+            Организация является членом <br>
+            Саморегулируемая организация Ассоциация «НАКС».
+          </p>
+          <p class="small_text_center">
+            Общество с ограниченной ответственностью «Аттестационный Центр СваркаТехСервис», являясь
+            членом СРО Ассоциация НАКС, начало свою деятельность в 2003 году с аттестации сварочных
+            материалов, сварочного оборудования и сварочных технологий.
+            В дальнейшем открылись такие подразделения, как Экзаменационный Центр «Башкортостан»
+            (аттестация специалистов неразрушающего контроля), Независимый орган по аттестации
+            лабораторий неразрушающего контроля (НОАЛ), Лаборатории разрушающего и неразрушающего
+            контроля (ЛРиНК).
+          </p>
+          <p class="small_text_center">
+            На текущий момент ООО «АЦ СТС» провело 5334 аттестации сварочных технологий, 2317
+            аттестаций сварочного оборудования, 185 аттестаций сварочных материалов.
+          </p>
+        </div>
+        <div class="block_center_gac_rb">
+          <p class="headline_center">
+            ООО "ГАЦ РБ" Головной аттестационно-сертификационный центр Республики Башкортостан
+          </p>
+
+          <p class="org_naks">
+            Организация является членом <br>
+            Саморегулируемая организация Ассоциация «НАКС».
+          </p>
+
+          <p class="small_text_center">
+            Общество с ограниченной ответственностью «Головной аттестационно-сертификационный центр
+            Республики Башкортостан» (ООО «ГАЦ РБ, ранее АНО «ГАЦ РБ»), являясь членом СРО Ассоциация
+            НАКС, начало свою деятельность в 1999 году с аттестации персонала сварочного производства.
+            С декабря 2017 г. на базе ООО «ГАЦ РБ» создан Центр оценки квалификации при Совете по
+            профессиональным квалификациям в области сварки.
+          </p>
+          <p class="small_text_center">
+            На текущий момент ООО «ГАЦ РБ » провело 57892 аттестации сварщиков, 11951 аттестацию
+            специалистов сварочного производства, 20 независимой оценки квалификации
+          </p>
+        </div>
+
+        <div class="head_service_info_text">
+          <div class="box_link_service_text">
+            <ul class="link_list_service">
+
+              <a href="http://www.naks.ru/assp/reestrac/index.php?ID=2230779" target="_blank">
+                <li class="link_service_text">
+                  Наш центр в реестрах НАКС
+                </li>
+              </a>
+              <a href="{% url 'reestr' %}">
+                <li class="link_service_text">
+                  Наш реестр САСв
+                </li>
+              </a>
+              <a href="{% url 'profstandarti' %}">
+                <li class="link_service_text">
+                  Профстандарты в области сварки
+                </li>
+              </a>
+            </ul>
+          </div>
+
+          <div class="box_img_center">
+            <p class="headline_center">
+              Наш центр
+            </p>
+            <p class="imglist" style="max-width: 1000px;">
+              <a href="{% static 'img/img_center_1.JPG' %}" data-fancybox="images"
+                data-caption="Backpackers following a dirt trail">
+                <img src="{% static 'img/img_center_1.JPG' %}" class="img-fluid img_center mr-2" />
+              </a>
+              <a href="{% static 'img/img_center_2.JPG' %}" data-fancybox="images"
+                data-caption="Backpackers following a dirt trail">
+                <img src="{% static 'img/img_center_2.JPG' %}" class="img-fluid img_center mr-2" />
+              </a>
+              <a href="{% static 'img/img_center_3.JPG' %}" data-fancybox="images"
+                data-caption="Backpackers following a dirt trail">
+                <img src="{% static 'img/img_center_3.JPG' %}" class="img-fluid img_center mr-2" />
+              </a>
+              <a href="{% static 'img/img_center_4.JPG' %}" data-fancybox="images"
+                data-caption="Backpackers following a dirt trail">
+                <img src="{% static 'img/img_center_4.JPG' %}" class="img-fluid img_center mr-2" />
+              </a>
+              <a href="{% static 'img/img_center_5.JPG' %}" data-fancybox="images"
+                data-caption="Backpackers following a dirt trail">
+                <img src="{% static 'img/img_center_5.JPG' %}" class="img-fluid img_center mr-2" />
+              </a>
+              <a href="{% static 'img/img_center_6.JPG' %}" data-fancybox="images"
+                data-caption="Backpackers following a dirt trail">
+                <img src="{% static 'img/img_center_6.JPG' %}" class="img-fluid img_center mr-2" />
+              </a>
+              <a href="{% static 'img/img_center_7.JPG' %}" data-fancybox="images"
+                data-caption="Backpackers following a dirt trail">
+                <img src="{% static 'img/img_center_7.JPG' %}" class="img-fluid img_center mr-2" />
+              </a>
+              <a href="{% static 'img/img_center_8.JPG' %}" data-fancybox="images"
+                data-caption="Backpackers following a dirt trail">
+                <img src="{% static 'img/img_center_8.JPG' %}" class="img-fluid img_center mr-2" />
+              </a>
+              <a href="{% static 'img/img_center_9.JPG' %}" data-fancybox="images"
+                data-caption="Backpackers following a dirt trail">
+                <img src="{% static 'img/img_center_9.JPG' %}" class="img-fluid img_center mr-2" />
+              </a>
+              <a href="{% static 'img/img_center_10.JPG' %}" data-fancybox="images"
+                data-caption="Backpackers following a dirt trail">
+                <img src="{% static 'img/img_center_10.JPG' %}" class="img-fluid img_center mr-2" />
+              </a>
+              <a href="{% static 'img/img_center_12.JPG' %}" data-fancybox="images"
+                data-caption="Backpackers following a dirt trail">
+                <img src="{% static 'img/img_center_12.JPG' %}" class="img-fluid img_center mr-2" />
+              </a>
+              <a href="{% static 'img/img_center_13.JPG' %}" data-fancybox="images"
+                data-caption="Backpackers following a dirt trail">
+                <img src="{% static 'img/img_center_13.JPG' %}" class="img-fluid img_center mr-2" />
+              </a>
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+      <div class="col-xl-6">
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+              aria-controls="nav-home" aria-selected="true">Руководящий состав ООО «АЦ СТС»</a>
+            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+              aria-controls="nav-profile" aria-selected="false">Руководящий состав ООО «ГАЦ РБ»</a>
+
+          </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <div class="block_personal">             
+              <div class="box_personal">
+                <p class="name_personal">
+                  Атрощенко Валерий <br> Владимирович
+                </p>
+                <p class="position_personal">
+                  Генеральный директор
+                </p>
+                <div class="phone_personal">
+                  тел.: (347)246-87-22
+                </div>
+    
+              </div>
+              <div class="box_personal">
+                <p class="name_personal">
+                  Карташев Анатолий <br> Васильевич
+                </p>
+                <p class="position_personal">
+                  Заместитель директора 
+                </p>
+                <div class="phone_personal">
+                  тел.: (347) 246-87-24
+                </div>
+    
+              </div>
+              <div class="box_personal">
+                <p class="name_personal">
+                  Газизов Айрат <br> Габдулхамитович
+                </p>
+                <p class="position_personal">
+                  Руководитель АЦСМ, заместитель директора 
+                </p>
+                <div class="phone_personal">
+                  тел.: (347) 246-87-25
+                </div>
+    
+              </div>
+              <div class="box_personal">
+                <p class="name_personal">
+                  Яковлев Михаил <br> Геннадиевич
+                </p>
+                <p class="position_personal">
+                  Руководитель АЦСТ
+                </p>
+                <div class="phone_personal">
+                  тел.: (347) 246-87-25
+                </div>
+    
+              </div>
+              <div class="box_personal">
+                <p class="name_personal">
+                  Теплов Алексей <br> Борисович
+                </p>
+    
+                <p class="position_personal">
+                  Руководитель АЦСО 
+                </p>
+                <div class="phone_personal">
+                  тел.: (347) 246-87-25
+                </div>
+    
+              </div>
+              <div class="box_personal">
+                <p class="name_personal">
+                  Ефтонов Антон Николаевич
+                </p>
+                <p class="position_personal">
+                  Начальник ЛНК и РК 
+                </p>
+                <div class="phone_personal">
+                  тел.: (347) 295-97-23
+                </div>
+    
+              </div>
+              <div class="box_personal">
+                <p class="name_personal">
+                  Звизжулев Иван Александрович
+                </p>
+                <p class="position_personal">
+                  Руководитель НОАЛ
+                </p>
+                <div class="phone_personal">
+                  тел.: (347) 295-97-23
+                </div>
+    
+              </div>
+              <div class="box_personal">
+                <p class="name_personal">
+                  Звизжулев Иван <br> Александрович
+                </p>
+                <p class="position_personal">
+                  Руководитель экзаменационного центра 
+                </p>
+                <div class="phone_personal">
+                  тел.: (347) 295-97-23
+                </div>
+    
+              </div>
+              <div class="box_personal">
+                <p class="name_personal">
+                  Королёва Фиоза <br> Фанузовна
+                </p>
+                <p class="position_personal">
+                  Главный бухгалтер 
+                </p>
+                <div class="phone_personal">
+                  тел.: (347) 246-87-21
+                </div>
+    
+              </div>
+            </div>  
+          </div>
+          <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <div class="block_personal">            
+              <div class="box_personal">
+                <p class="name_personal">
+                  Атрощенко Валерий <br> Владимирович
+                </p>
+                <p class="position_personal">
+                  Генеральный директор
+                </p>
+                <div class="phone_personal">
+                  тел.: (347)246-87-22
+                </div>
+    
+              </div>
+              <div class="box_personal">
+                <p class="name_personal">
+                  Сафархузина Полина Валерьевна
+                </p>
+                <p class="position_personal">
+                  Руководитель АЦСП 
+                </p>
+                <div class="phone_personal">
+                  тел.: (347)216-42-33
+                </div>
+    
+              </div>
+              <div class="box_personal">
+                <p class="name_personal">
+                  Обухова Оксана Георгиевна
+                </p>
+                <p class="position_personal">
+                  Главный бухгалтер 
+                </p>
+                <div class="phone_personal">
+                  тел.: (347)286-52-70
+                </div>
+    
+              </div>
+              <div class="box_personal">
+                <p class="name_personal">
+                  Атрощенко Людмила Анатольевна
+                </p>
+                <p class="position_personal">
+                  Зав. отделом аттестации специалистов 
+                </p>
+                <div class="phone_personal">
+                  тел.: (347)286-52-60
+                </div>
+    
+              </div>
+              <div class="box_personal">
+                <p class="name_personal">
+                  Гилёва Татьяна Николаевна
+                </p>
+    
+                <p class="position_personal">
+                  Зав. отделом аттестации сварщиков 
+                </p>
+                <div class="phone_personal">
+                  тел.: (347)246-87-23
+                </div>
+    
+              </div>
+              <div class="box_personal">
+                <p class="name_personal">
+                  Сафархузина Полина Валерьевна
+                </p>
+                <p class="position_personal">
+                  Руководитель ЦОК 
+                </p>
+                <div class="phone_personal">
+                  тел.: (347) 216-42-33
+                </div>
+    
+              </div>
+              <div class="box_personal">
+                <p class="name_personal">
+                  Савичев Максим Павлович
+                </p>
+                <p class="position_personal">
+                  Начальник ЛНК 
+                </p>
+                <div class="phone_personal">
+                  тел.: (347)246-87-23
+                </div>
+    
+              </div>
+             
+            </div>
+          </div>
+        
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,85 @@
+// Профстандарты в области сварки
+
+.box__standart {
+    box-shadow: 0 2px 18px rgba(27, 27, 27, 0.03);
+    margin-top: 25px;
+    padding: 35px;
+    border-radius: 3px;
+    border: 1px solid #f3f3f3;
+
+    &:hover {
+        border: 1px solid rgb(199, 223, 255);
+        transition: 0.2s;
+    }
+}
+
+.header__standart {
+    font-size: 16px;
+    font-weight: 350;
+    margin-bottom: 10px;
+}
+
+.name__standart {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+}
+
+.info__standart {
+    font-size: 16px;
+    font-weight: 350;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.number__standart {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.box__standart__line__two {
+    padding: 70px 0px;
+}
+
+.download__standart {
+    background-color: rgb(206, 206, 206);
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    margin-top: 10px;
+
+    a {
+        padding: 25px;
+        font-size: 14px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    &:hover {
+        background-color: rgb(155, 155, 155);
+        transition: 0.2s;
+    }
+}
+
+.right__column__header {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 25px 0px 0px;
+}
+
+.list__service__column {
+    a {
+        text-decoration: none;
+        color: #000;
+
+        &:hover {
+            color: rgb(121, 121, 121);
+        }
+    }
+}
+
+.small__column__text {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}

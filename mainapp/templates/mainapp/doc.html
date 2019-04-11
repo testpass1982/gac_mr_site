@@ -1,0 +1,51 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+{% load link_holders %}
+{% block content %}
+<div class="box_inside_pages" id="doc">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-1">
+                <div class="headline_inside_pages_line"></div>
+            </div>
+
+            <div class="col-xl-6">
+                <p class="headline_inside_pages_text">
+                    Документы
+                </p>                
+            </div>
+        </div>
+     
+            <div class="box_document">
+                <div class="row">
+                    {% for doc in documents %}
+                                    <div class="col-xl-3">
+                            <a href="{{ doc.document }}" download="">
+                                <div class="box_doc_file" title="Скачать">
+                                    <div class="{% if doc.extension == '.docx' %}icon_word{% else %}icon_pdf{% endif %}"></div>
+                                    <p class="doc_text_name">
+                                        {{ doc.title|truncatechars:35 }}
+                                        {{ doc.extension }}
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+        
+                    </div>
+                </div>
+     
+
+        <div class="row">
+            <div class="col-xl-12">
+               <div class="box_doc_button">
+                    <button class="more_doc" id="">
+                            Показать еще документы
+                        </button>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
