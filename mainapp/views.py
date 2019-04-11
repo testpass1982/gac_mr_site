@@ -58,7 +58,7 @@ def index(request):
 
     #Вывести ВСЕ объекты из БД
     # posts = Post.objects.all()[:3]
-    posts = Post.objects.filter(publish_on_main_page=True)[:7]
+    posts = Post.objects.filter(publish_on_main_page=True).order_by('-published_date')[:5]
     publications = []
     for post in posts:
         try:
