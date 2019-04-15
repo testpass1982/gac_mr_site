@@ -19,7 +19,7 @@
 
         <div class="row" id="service">
             {% for publ in publications %}
-            <div class="col-sm-6 col-xl-4">
+            <div class="col-sm-4 col-xl-4">
                 <div class="box_img_service" style="background: url({{ publ.photo }}) no-repeat;">
                     <a data-fancybox="" data-src="#trueModal{{ publ.post.pk }}" data-modal="true" class="service_link">
                         <div class="box_content">
@@ -45,7 +45,7 @@
 
             </div>
             {% endfor %}
-            <div class="col-sm-6 col-xl-4">
+            <div class="col-sm-4 col-xl-4">
                 <a href="{% url 'ocenka_details' %}#ocenka"  class="service_link">
                 <div class="box_img_service_ocenka">
                         <div class="box_content">

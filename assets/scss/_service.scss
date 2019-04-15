@@ -23,7 +23,7 @@
 // img
 
 .box_img_service_ocenka{
-    background: url(/static/img/img_ocenka.jpg) ;
+    background: url(/static/img/img_ocenka.jpg)  ;
 }
 
 .box_img_service_ocenka:hover .more {
@@ -67,15 +67,13 @@
     opacity: 1;
     margin-top: 15px;
     transition: 0.2s;
-
     @media screen and (max-width: 1199px) {
         display: none;
     }
 }
 
 .box_img_service {
-    margin-bottom: 25px;
-  
+    margin-bottom: 25px;  
     background-size: cover;
     cursor: pointer;
 
@@ -102,7 +100,10 @@
 .box_content {
     background-color: #212944a4;
     padding: 100px 25px 65px 45px;
-    height: 50%;
+    // height: 50%;
+    @media screen and (max-width: 992px) {
+        padding: 35px;
+      }
 
     @media screen and (max-width: 435px) {
         padding: 25px 15px 25px 25px;
@@ -113,11 +114,19 @@
 .name_service {
     font-size: 26px;  
     color: #fff;
-    font-weight: 450;    
+    font-weight: 450;
+    width: 400px;    
     @media screen and (max-width: 1200px) {
-        font-size: 20px;        
-        line-height: 1.8;
+         width: 330px;  
+         font-size: 20px;        
+         line-height: 1.8; 
     }
+    @media screen and (max-width: 992px) {      
+        width: 100%;
+        line-height: 1.6;
+        font-size: 16px;
+       }
+  
 
 }
 

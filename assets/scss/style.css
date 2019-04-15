@@ -782,8 +782,10 @@ input[type=file] {
 
 .box_content {
   background-color: #212944a4;
-  padding: 100px 25px 65px 45px;
-  height: 50%; }
+  padding: 100px 25px 65px 45px; }
+  @media screen and (max-width: 992px) {
+    .box_content {
+      padding: 35px; } }
   @media screen and (max-width: 435px) {
     .box_content {
       padding: 25px 15px 25px 25px; } }
@@ -791,11 +793,18 @@ input[type=file] {
 .name_service {
   font-size: 26px;
   color: #fff;
-  font-weight: 450; }
+  font-weight: 450;
+  width: 400px; }
   @media screen and (max-width: 1200px) {
     .name_service {
+      width: 330px;
       font-size: 20px;
       line-height: 1.8; } }
+  @media screen and (max-width: 992px) {
+    .name_service {
+      width: 100%;
+      line-height: 1.6;
+      font-size: 16px; } }
 
 .line_service_yellow {
   border: 0.5px solid #ffbd3d;
@@ -1224,7 +1233,8 @@ input[type=file] {
 .date_news_footer {
   color: #6f7379;
   font-size: 12px;
-  font-weight: 400; }
+  font-weight: 400;
+  padding: 3px 0px 0px; }
 
 .point_yellow::before {
   content: '';
@@ -1378,6 +1388,11 @@ body {
   @media screen and (max-width: 1199px) {
     .header__political {
       margin-top: 15px; } }
+
+.footnote {
+  font-size: 14px;
+  font-weight: 350;
+  color: #d85555; }
 
 .political__text__small {
   font-size: 16px;
@@ -2188,8 +2203,8 @@ button:focus {
   margin-bottom: 0; }
 
 .phone_personal {
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 500;
   margin-bottom: 0px;
   margin-top: 5px; }
 
