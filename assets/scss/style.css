@@ -419,17 +419,17 @@ input[type=file] {
     .box_logo_3 {
       display: none; } }
 
-.header_sasp {
+.header_sasv {
   text-align: right; }
   @media screen and (max-width: 992px) {
-    .header_sasp {
+    .header_sasv {
       text-align: center;
       margin-top: 15px; } }
 
-.logo_sasp {
+.logo_sasv {
   width: 70px; }
   @media screen and (max-width: 1200px) {
-    .logo_sasp {
+    .logo_sasv {
       display: none; } }
 
 .logo_ac {
@@ -453,10 +453,10 @@ input[type=file] {
     text-align: left;
     display: inline; } }
 
-.logo_sasp_mob {
+.logo_sasv_mob {
   display: none; }
   @media screen and (max-width: 320px) {
-    .logo_sasp_mob {
+    .logo_sasv_mob {
       display: block;
       text-align: right;
       width: 70px;
