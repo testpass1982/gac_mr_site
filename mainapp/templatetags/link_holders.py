@@ -32,3 +32,12 @@ def doc_holder(url_code):
         url = '#'
     return url
 
+@register.simple_tag
+def doc_title(url_code):
+    try:
+        doc = Document.objects.get(url_code=url_code)
+        title = doc.title
+    except Document.DoesNotExist:
+        title = 'Загрузите документ с кодом {}'.format(url_code)
+    return title
+
