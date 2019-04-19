@@ -223,9 +223,10 @@
                         </p>
 
                         <button class="soglashenie__button mb-1">
-                            <a href="{{ doc.document.url }}" class="soglashenie__button__text"
-                                title="{{ doc.document.name }}" download="#">{{ doc.title|truncatechars:15 }}
-                                <img src="{% static '/img/download__icon.png' %}" alt="" class="download__icon"></a>
+                            <a href={% doc_holder 'UKAZ_249' %} class="soglashenie__button__text">
+                                {% doc_title 'UKAZ_249' %}
+                                <img src="{% static '/img/download__icon.png' %}" alt="" class="download__icon">
+                                </a>
                         </button>
                         <div class="line_ocenka"></div>
                     </div>
