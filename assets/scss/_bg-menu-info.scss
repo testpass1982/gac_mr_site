@@ -187,7 +187,6 @@
     padding: 20px 0px 20px 30px;
     background-color: #fff;
     // border-radius: 7px;   
-
     @media screen and (max-width: 992px) {
         padding: 5px 0px;
         margin-bottom: 0px;
@@ -201,9 +200,8 @@
 }
 
 .navbar {
-    font-size: 18px;
+    font-size: 16px;
     color: #39567e;
-
 }
 
 
@@ -235,7 +233,7 @@
 
     // font-weight: 450;
     &:hover {
-        color: #294874;
+        color: #ffbd3d;
         transition: 0.2s;
     }
 }

@@ -476,7 +476,7 @@ input[type=file] {
   border: 0.5px solid #fff; }
 
 .navbar {
-  font-size: 18px;
+  font-size: 16px;
   color: #39567e; }
 
 .menu__navbar ul {
@@ -500,7 +500,7 @@ input[type=file] {
   padding: 0;
   color: #272727; }
   .menu__navbar .navbar .nav-item .nav-link:hover {
-    color: #294874;
+    color: #ffbd3d;
     transition: 0.2s; }
 
 .menu__navbar .navbar-expand-lg .navbar-nav .nav-link {
@@ -716,7 +716,7 @@ input[type=file] {
       padding: 25px 0px 25px; } }
 
 .headline_text {
-  font-size: 45px;
+  font-size: 38px;
   color: #39567e;
   text-transform: uppercase;
   margin-bottom: 5px; }
@@ -1021,7 +1021,7 @@ input[type=file] {
       display: none; } }
 
 .headline_text_certified {
-  font-size: 45px;
+  font-size: 38px;
   color: #fff;
   text-transform: uppercase;
   margin-bottom: 5px; }
@@ -1096,14 +1096,14 @@ input[type=file] {
   width: 25px;
   height: 25px;
   margin-top: 10px;
-  margin-left: -35px;
+  margin-left: -5px;
   background: url(/static/img/phone.png) center 0 no-repeat; }
 
 .contacti_consultant {
   font-size: 16px;
   font-weight: 350;
   color: #fff;
-  padding-left: 35px;
+  padding-left: 30px;
   margin-top: -15px; }
 
 @media screen and (max-width: 1199px) {
@@ -1122,11 +1122,18 @@ input[type=file] {
   color: #fff;
   margin-bottom: 15px; }
 
-.contacti_number {
+.contacti_number a {
   font-size: 26px;
   font-weight: 400;
+  text-decoration: none;
   color: #fff;
-  padding-left: 35px; }
+  padding-left: 30px; }
+  .contacti_number a:hover {
+    color: #ffbd3d;
+    transition: 0.2s;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out; }
 
 .contacti_adres_text::before {
   content: '';
@@ -2246,6 +2253,13 @@ button:focus {
 
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
   color: #5a5a5a; }
+
+.logo_spks {
+  padding: 15px 0px 15px; }
+
+@media screen and (max-width: 1200px) {
+  .spks_logo {
+    width: 250px; } }
 
 .ocenka_details_small_text {
   font-size: 18px;

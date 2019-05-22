@@ -30,7 +30,7 @@
                             <li class="nav-item active">
                                 <a class="nav-link{% if request.resolver_match.url_name == 'index' %} smoothScroll{% endif %}"
                                     href="{% if request.resolver_match.url_name == 'index' %}#center{% else %}{% url 'index' %}#center{% endif %}">Центр
-                                    аттестации
+                                    аттестация
                                     <span class="sr-only">(current)</span>
                                 </a>
                             </li>
@@ -42,12 +42,12 @@
                             </li>
 
                             <li class="nav-item active">
-                                <a class="nav-link" href="{% url 'doc' %}">Документы
+                                <a class="nav-link" href="{% url 'doc' %}">Разрешительные документы
                                     <span class="sr-only">(current)</span>
                                 </a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="{% url 'ocenka_details' %}#ocenka">Оценка квалификации в области сварки
+                                <a class="nav-link" href="{% link_holder 'CENTER_OCENKI_KVAL' %}">{% title_holder 'CENTER_OCENKI_KVAL' %}
                                     <span class="sr-only">(current)</span>
                                 </a>
                             </li>

@@ -24,7 +24,7 @@
     width: 25px;
     height: 25px;
     margin-top: 10px;
-    margin-left: -35px;
+    margin-left: -5px;
     background: url(/static/img/phone.png) center 0 no-repeat;
 }
 
@@ -32,7 +32,7 @@
     font-size: 16px;
     font-weight: 350;
     color: #fff;
-    padding-left: 35px;
+    padding-left: 30px;
     margin-top: -15px;
 }
 
@@ -60,11 +60,19 @@
 }
 
 
-.contacti_number {
+.contacti_number a {
     font-size: 26px;
     font-weight: 400;
+    text-decoration: none;
     color: #fff;
-    padding-left: 35px;
+    padding-left: 30px;
+    &:hover{
+        color: #ffbd3d;
+        transition: 0.2s;
+        -moz-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        -webkit-transition: all 0.2s ease-out;    
+    }
 }
 
 .contacti_adres_text::before {
