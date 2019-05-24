@@ -97,3 +97,4 @@ db.sqlite3
 **/migrations/**
 media/*
 log/**
+server/
