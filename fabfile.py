@@ -31,3 +31,6 @@ def backup_data():
 def commit():
     local('git add .')
     local('git commit -m "{}"'.format(time.ctime()))
+
+def push():
+    local('git push -u origin master')
