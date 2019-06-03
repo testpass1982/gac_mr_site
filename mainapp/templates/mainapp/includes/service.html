@@ -22,6 +22,7 @@
 
         <div class="row" id="service">
             {% for publ in publications %}
+            {% autoescape off %}
             <div class="col-sm-4 col-xl-4">
                 <div class="box_img_service" style="background: url({{ publ.photo }}) no-repeat;">
                     <a data-fancybox="" data-src="#trueModal{{ publ.post.pk }}" data-modal="true" class="service_link">
@@ -47,7 +48,8 @@
                 </div>
 
             </div>
-            {% endfor %}    
+            {% endautoescape %}
+            {% endfor %}
 
             <div class="box_head_serivce">
                 <p class="info_text_service">
