@@ -101,7 +101,7 @@ class PostAdmin(admin.ModelAdmin):
     view_on_site = True
 
     fields = [
-        'id', 'title', 'tags', 'category', 'author', 'short_description',
+        'id', 'title', 'url_code', 'tags', 'category', 'author', 'short_description',
         'text', get_url, 'created_date', 'published_date',
         'publish_on_main_page', 'publish_on_news_page', 'publish_in_basement'
     ]
