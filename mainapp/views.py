@@ -58,11 +58,11 @@ def index(request):
 
     #Вывести ВСЕ объекты из БД
     # posts = Post.objects.all()[:3]
-    posts = Post.objects.filter(publish_on_main_page=True).order_by('-published_date')[:5]
+    posts = Post.objects.filter(publish_on_main_page=True).order_by('-published_date')[:6]
     publications = []
     for post in posts:
         try:
-            publications.append({'post': post, 'photo': PostPhoto.objects.get(post=post).image.url })
+            publications.append({'post': post, 'photo': PostPhoto.objects.filter(post=post).first().image.url })
         except PostPhoto.DoesNotExist:
             publications.append({'post': post, 'photo': 'https://place-hold.it/1200x700'})
     print('PUBLICACTIONS', publications)
