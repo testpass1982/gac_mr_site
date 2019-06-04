@@ -284,3 +284,18 @@ class WeldData(models.Model):
 
     class Meta:
         abstract = True
+
+class Profstandard(models.Model):
+    title = models.CharField(u'Название профстандарта', max_length=200)
+    info = models.CharField(u'Информация о стандарте(код)', max_length=300)
+    reg_number = models.CharField(u'Регистрационный номер', max_length=20)
+    mintrud_prikaz = models.CharField(u'Приказ минтруда', max_length=100)
+    document = models.FileField(u'Файл', upload_to='upload/')
+    number = models.SmallIntegerField(u'Порядок сортировки')
+
+    class Meta:
+        verbose_name = 'Профстандарт'
+        verbose_name_plural = 'Профстандарты'
+
+    def __str__(self):
+        return self.title

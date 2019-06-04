@@ -105,10 +105,15 @@ def ocenka_details(request):
     return render(request, 'mainapp/ocenka_details.html')
 def news_two(request):
     return render(request, 'mainapp/news_two.html')
+
 def center(request):
     return render(request, 'mainapp/center.html')
+
 def profstandarti(request):
-    return render(request, 'mainapp/profstandarti.html')
+    from .models import Profstandard
+    profstandards = Profstandard.objects.all().order_by('number')
+    return render(request, 'mainapp/profstandarti.html', {'profstandards': profstandards})
+
 def all_news(request):
     content = {
         'title': 'All news',

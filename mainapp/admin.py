@@ -129,7 +129,9 @@ class PostPhotoAdmin(admin.ModelAdmin):
 class MessageAdmin(admin.ModelAdmin):
     list_display = ['title', 'typeof', 'params', 'sender_email', 'status']
 
+from .models import Profstandard
 
+admin.site.register(Profstandard)
 admin.site.register(Tag)
 admin.site.register(Category)
 admin.site.register(Contact)
