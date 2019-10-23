@@ -27,7 +27,7 @@ SECRET_KEY = '19=%5c1709k9kllx65po)__kf&et-(^6mpl4x7d7o95q@2@zk('
 DEBUG = True
 
 # ALLOWED_HOSTS = ['ac_ufa_site.minml.ru']
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition

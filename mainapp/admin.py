@@ -4,7 +4,7 @@ from django.utils.encoding import force_text
 from django.utils.html import format_html
 
 from .models import Post, Category, Tag, Document, PostPhoto, Article, Message, Contact
-from .models import Staff, Registry, Menu
+from .models import Staff, Registry, Menu, Chunk
 
 # from .models import WeldData
 # from .domain_model import WeldOrg, Welder
@@ -132,6 +132,7 @@ class MessageAdmin(admin.ModelAdmin):
 from .models import Profstandard
 
 admin.site.register(Profstandard)
+admin.site.register(Chunk)
 admin.site.register(Tag)
 admin.site.register(Category)
 admin.site.register(Contact)

@@ -1,0 +1,37 @@
+{% load static %}{% load link_holders %}
+<div class="modal fade" id="modal-competition" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="">{% chunk 'COMPETITION' 'title' %}</h5>
+                <div class="row">
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><img src="{% static 'img/close2.png' %}" title="Закрыть окно" alt=""></span>
+                </button>
+            </div>
+
+            <form>
+                <div class="modal-body">
+
+                    {% autoescape off %}
+                    {% chunk 'COMPETITION' %}
+                    {% endautoescape %}
+
+                    {% comment %} <div class="custom-control-checkbox custom-checkbox d-inline-block">
+                        <input type="checkbox" class="custom-control-input" id="soglasie" required="">
+                        <label class="custom-control-label" for="soglasie"><small>Я даю <a href="#">согласие на
+                                    обработку персональных данных</a></small></label>
+                    </div> {% endcomment %}
+                </div>
+                <div class="modal-footer">
+                    <a href="{% chunk 'COMPETITION' 'details_link' %}" class="button__to__send_zayavka__formmodal d-inline-block">Подробнее</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- End Набор в группу аттестации -->
+
+<!-- Модальное окно - Задать вопрос -->

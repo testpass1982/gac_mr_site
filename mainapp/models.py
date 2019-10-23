@@ -299,3 +299,17 @@ class Profstandard(models.Model):
 
     def __str__(self):
         return self.title
+
+class Chunk(models.Model):
+    """class for making html chunks on pages"""
+    title = models.CharField(u'Название вставки', max_length=64)
+    code = models.CharField(u'Уникальный код вставки', max_length=64, default='КОД_ВСТАВКИ')
+    html = RichTextUploadingField(u'Форматирование вставки')
+    details_link = models.URLField(u'Ссылка на подробнее', null=True, blank=True)
+
+    class Meta:
+        verbose_name = 'Вставка'
+        verbose_name_plural = 'Вставки'
+
+    def __str__(self):
+        return self.title
