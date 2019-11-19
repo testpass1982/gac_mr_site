@@ -38,7 +38,7 @@
 
 .box_img_service_ocenka {
     margin-bottom: 25px;
-  
+
     background-size: cover;
     cursor: pointer;
 
@@ -57,7 +57,7 @@
     @media screen and (max-width: 435px) {
         margin-top: 10px;
         margin-bottom: 15px;
-    
+
     }
 }
 
@@ -73,9 +73,25 @@
 }
 
 .box_img_service {
-    margin-bottom: 25px;  
-    background-size: cover;
-    cursor: pointer;
+    width: 100%;
+    padding: 80px 50px;
+    background-position: center center !important;
+    background-size: cover !important;
+    background: rgba($color: #212944a4, $alpha: 0.8);
+    background-repeat: no-repeat;
+    position: relative;
+
+    // &:before {
+    //     display: block;
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     right: 15px;
+    //     bottom: 0;
+    //     left: 15px;
+    //     background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
+    //     opacity: .2;
+    //   }
 
     a {
         text-decoration: none;
@@ -87,13 +103,37 @@
         -webkit-transform: scale(1.01);
         -moz-transform: scale(1.01);
         -o-transform: scale(1.01);
+        // &:before {
+        //     display: block;
+        //     content: '';
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0px;
+        //     bottom: 0;
+        //     left: 0px;
+        //     background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
+        //     opacity: .3;
+        //   }
     }
 
     @media screen and (max-width: 435px) {
         margin-top: 10px;
         margin-bottom: 15px;
-    
+
     }
+}
+
+.content__pict {
+        position: absolute;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        // background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
+        opacity: .3;
 }
 
 
@@ -112,26 +152,30 @@
 }
 
 .name_service {
-    font-size: 26px;  
+    position: relative;
+    font-size: 26px;
     color: #fff;
     font-weight: 450;
-    width: 400px;    
+    z-index: 1000;
     @media screen and (max-width: 1200px) {
-         width: 330px;  
-         font-size: 20px;        
-         line-height: 1.8; 
+         width: 330px;
+         font-size: 20px;
+         line-height: 1.8;
     }
-    @media screen and (max-width: 992px) {      
+    @media screen and (max-width: 992px) {
         width: 100%;
         line-height: 1.6;
         font-size: 16px;
        }
-  
-
+    p {
+        position: absolute;
+    }
 }
 
 
+
 .line_service_yellow {
+    position: absolute;
     border: 0.5px solid #ffbd3d;
     width: 50%;
     margin-bottom: 5px;

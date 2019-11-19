@@ -63,8 +63,8 @@ def index(request):
     for post in posts:
         try:
             publications.append({'post': post, 'photo': PostPhoto.objects.filter(post=post).first().image.url })
-        except PostPhoto.DoesNotExist:
-            publications.append({'post': post, 'photo': 'https://place-hold.it/1200x700'})
+        except Exception as e:
+            publications.append({'post': post, 'photo': None })
     print('PUBLICACTIONS', publications)
     # main_page_articles = Article.objects.filter(
     #     publish_on_main_page=True).order_by('-published_date')[:3]

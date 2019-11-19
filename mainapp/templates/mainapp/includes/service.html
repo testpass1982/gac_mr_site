@@ -23,10 +23,10 @@
         <div class="row" id="service">
             {% for publ in publications %}
             {% autoescape off %}
-            <div class="col-sm-4 col-xl-4">
-                <div class="box_img_service" style="background: url({{ publ.photo }}) no-repeat;">
-                    <a data-fancybox="" data-src="#trueModal{{ publ.post.pk }}" data-modal="true" class="service_link">
-                        <div class="box_content">
+            <div class="col-sm-6 col-xl-4 mb-3 d-flex align-items-stretch">
+                {% comment %} <div class="box_img_service" {% if publ.photo is not None %} style="background: url({{ publ.photo }}) no-repeat;{% endif %}"> {% endcomment %}
+                <div class="box_img_service">
+                            <img class="content__pict" src="{{ publ.photo }}" alt="">
                             <p class="name_service">
                                 {{ publ.post.title }}
                             </p>
@@ -37,9 +37,7 @@
                                     Подробнее
                                 </a>
                             </button>
-                        </div>
                 </div>
-                </a>
                 <div class="box_head_serivce">
                     <p class="info_text_service">
                         {% comment %} {{ post.text|safe}} {% endcomment %}

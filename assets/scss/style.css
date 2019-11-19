@@ -763,9 +763,13 @@ input[type=file] {
       display: none; } }
 
 .box_img_service {
-  margin-bottom: 25px;
-  background-size: cover;
-  cursor: pointer; }
+  width: 100%;
+  padding: 80px 50px;
+  background-position: center center !important;
+  background-size: cover !important;
+  background: rgba(33, 41, 68, 0.8);
+  background-repeat: no-repeat;
+  position: relative; }
   .box_img_service a {
     text-decoration: none; }
   .box_img_service:hover {
@@ -780,6 +784,17 @@ input[type=file] {
       margin-top: 10px;
       margin-bottom: 15px; } }
 
+.content__pict {
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: .3; }
+
 .box_content {
   background-color: #212944a4;
   padding: 100px 25px 65px 45px; }
@@ -791,10 +806,11 @@ input[type=file] {
       padding: 25px 15px 25px 25px; } }
 
 .name_service {
+  position: relative;
   font-size: 26px;
   color: #fff;
   font-weight: 450;
-  width: 400px; }
+  z-index: 1000; }
   @media screen and (max-width: 1200px) {
     .name_service {
       width: 330px;
@@ -805,8 +821,11 @@ input[type=file] {
       width: 100%;
       line-height: 1.6;
       font-size: 16px; } }
+  .name_service p {
+    position: absolute; }
 
 .line_service_yellow {
+  position: absolute;
   border: 0.5px solid #ffbd3d;
   width: 50%;
   margin-bottom: 5px; }
