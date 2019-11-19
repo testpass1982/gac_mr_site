@@ -100,3 +100,4 @@ log/**
 server/
 *style.css
 *style.css.map
+static_root/
