@@ -3,8 +3,7 @@ from django.urls import reverse
 from django.utils.encoding import force_text
 from django.utils.html import format_html
 
-from .models import Post, Category, Tag, Document, PostPhoto, Article, Message, Contact
-from .models import Staff, Registry, Menu, Chunk
+from .models import *
 
 # from .models import WeldData
 # from .domain_model import WeldOrg, Welder
@@ -129,9 +128,14 @@ class PostPhotoAdmin(admin.ModelAdmin):
 class MessageAdmin(admin.ModelAdmin):
     list_display = ['title', 'typeof', 'params', 'sender_email', 'status']
 
-from .models import Profstandard
+@admin.register(OrderService)
+class OrderServiceAdmin(admin.ModelAdmin):
+    list_display = ['id', 'name', 'phone', 'ready', 'compound']
+    fields = ['name', 'phone', 'compound', 'ready']
 
 admin.site.register(Profstandard)
+admin.site.register(OrderEmail)
+# admin.site.register(OrderService)
 admin.site.register(Chunk)
 admin.site.register(Tag)
 admin.site.register(Category)

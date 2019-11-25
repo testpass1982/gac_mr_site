@@ -1,8 +1,9 @@
 from django import forms
 from django.core.validators import FileExtensionValidator, validate_email
 import os
+from captcha.fields import CaptchaField
 
-from .models import Post, Article, Document
+from .models import Post, Article, Document, OrderService
 
 
 class ContentForm(forms.ModelForm):
@@ -105,3 +106,21 @@ class SearchRegistryForm(forms.Form):
     #             raise forms.ValidationError('File types is not allowed')
     #     except Exception as e:
     #         raise forms.ValidationError('Can not identify file type')
+
+class OrderForm(forms.ModelForm):
+    captcha = CaptchaField()
+    class Meta:
+        model = OrderService
+        fields = ['name', 'phone', 'compound']
+        widgets = {
+                'name': forms.TextInput({
+                'placeholder': "Ваше имя",
+                'class': 'form-control form-control-sm',
+                }),
+                'phone': forms.TextInput({
+                    'placeholder': '',
+                    'class': 'form-control form-control-sm',
+                    'type': 'text',
+                }),
+                # <input type="text" class="form-control form-control-sm" placeholder=""  type="text" id="phone2" required="">
+            }

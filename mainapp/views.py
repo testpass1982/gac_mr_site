@@ -5,17 +5,74 @@ from django.core.exceptions import ValidationError
 # from django.contrib import messages
 from django.utils import timezone
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from .models import Post, PostPhoto, Tag, Category, Document, Article, Message, Contact
-from .models import Registry, Menu
-from .models import Staff
-from .forms import PostForm, ArticleForm, DocumentForm
+from .models import *
+from .forms import PostForm, ArticleForm, DocumentForm, OrderForm
 from .forms import SendMessageForm, SubscribeForm, AskQuestionForm, SearchRegistryForm
 from .adapters import MessageModelAdapter
 from .message_tracker import MessageTracker
 from .utilites import UrlMaker
 from .registry_import import Importer, data_url
+from django.core.mail import send_mail
+from django.conf import settings
+
 
 # Create your views here.
+
+def accept_order(request):
+    if request.method == 'POST':
+        # print('REQUEST POST', request.POST)
+        data = {
+            "name": request.POST.get('name'),
+            "phone": request.POST.get('phone'),
+            "captcha_1": request.POST.get('captcha_1'),
+            "captcha_0": request.POST.get('captcha_0'),
+            }
+        order_variants = ['attst', 'attso', 'attsvsp', 'attlab', 'attsm', 'ocenka']
+        if any([request.POST.get(order_item) for order_item in order_variants]):
+            order_compound = {
+                "Аттестация технологий": 'attst' in request.POST,
+                "Аттестация оборудования": 'attso' in request.POST,
+                "Аттестация персонала": 'attso' in request.POST,
+                "Аттестация лаборатории": 'attlab' in request.POST,
+                "Аттестация материалов": 'attsm' in request.POST,
+                "Оценка квалификации": 'ocenka' in request.POST,
+            }
+            data.update({"compound": "{}".format(order_compound)})
+        else:
+            order_compound = {'Ничего не заявлено': True}
+        form = OrderForm(data)
+        if form.is_valid():
+            instance = form.save()
+            current_absolute_url = request.build_absolute_uri()
+            email_address_arr = ['popov.anatoly@gmail.com']
+            order_arr = []
+
+            for key in order_compound.keys():
+                if order_compound[key] is True:
+                    order_arr.append(key)
+
+            if '8000' not in current_absolute_url:
+                if Profile.objects.first() is not None:
+                    # admin_email_address = Profile.objects.first().org_order_email.split(" ")
+                    admin_email_address = [addr.email for addr in OrderEmail.objects.all()]
+                else:
+                    admin_email_address = 'popov@naks.ru'
+                email_address_arr += admin_email_address
+            # 4seconds economy to send_email every time i make tests
+            if not instance.name == 'tolik_make_tests':
+                send_mail(
+                    'Заполнена заявка на сайте',
+    """
+    Заполнена заявка на сайте {url}
+    Имя: {name}, Телефон: {phone},
+    Заявлено: {order_string}
+    """.format(url=current_absolute_url, name=instance.name, phone=instance.phone, order_string=", ".join(order_arr)),
+                    settings.EMAIL_HOST_USER,
+                    email_address_arr
+                )
+            return JsonResponse({'message': 'ok', 'order_id': instance.pk})
+        else:
+            return JsonResponse({'errors': form.errors})
 
 def index(request):
     #TODO:  сделать когда-нибудь вывод форм на глваную

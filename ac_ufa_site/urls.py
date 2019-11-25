@@ -31,11 +31,13 @@ urlpatterns = [
    path('ocenka_details/', mainapp.ocenka_details, name='ocenka_details'),
    path('profstandarti/', mainapp.profstandarti, name='profstandarti'),
    path('center/', mainapp.center, name='center'),
-    path(
+   path(
         'detailview/<slug:content>/<slug:pk>',
         mainapp.details,
         name='detailview'),
    path('ckeditor/', include('ckeditor_uploader.urls')),
+   path('accept_order/', mainapp.accept_order, name="accept_order"),
+   path('captcha/', include('captcha.urls')),
 ]
 
 if settings.DEBUG:

@@ -1,7 +1,36 @@
 // Кнопка поиска
 
 $(document).ready(function() {
+
   console.log('123');
+
+  function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie != '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = jQuery.trim(cookies[i]);
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+  }
+  var csrftoken = getCookie('csrftoken');
+  function csrfSafeMethod(method) {
+    // these HTTP methods do not require CSRF protection
+    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+  }
+  $.ajaxSetup({
+      beforeSend: function(xhr, settings) {
+          if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+              xhr.setRequestHeader("X-CSRFToken", csrftoken);
+          }
+      }
+  });
 
   $('[data-fancybox="gallery"]').fancybox({
     // Options will go here
@@ -149,118 +178,75 @@ $(document).ready(function() {
     var $value = $(this).parent().next();
     $value.addClass("added").text($(this).val().replace(/C:\\fakepath\\/i, ''));
   });
-  $("#phone").mask("+8 (9999) 999 - 99 - 99", { completed: function () { alert("Да, этой мой номер"); } });
-  $("#phone2").mask("+8 (9999) 999 - 99 - 99", { completed: function () { alert("Да, этой мой номер"); } });
+  $("#phone").mask("+7 (9999) 999 - 99 - 99", { completed: function () { alert("Да, этой мой номер"); } });
+  $("#phone2").mask("+7 (9999) 999 - 99 - 99", { completed: function () { alert("Да, этой мой номер"); } });
 
-  // //jQuery plugin
-  // (function ($) {
+  $('#order_service_button').click(function(event) {
+    event.preventDefault();
+    order = $('#order_form').serializeArray();
+    $('.choose__item ul li').each(function() {
+        if ($(this).hasClass('selected')) {
+          // console.log('DATA', $(this).data('order'));
+          order.push({"name": $(this).data('order'), "value": "selected"});
+        }
+      });
+    // console.table(order);
+    console.log(order)
+    $.post('/accept_order/', order)
+      .done(response=>{
+          if (response['order_id']) {
+            var id = response['order_id'];
+            $('.modal-title:visible').text('Спасибо!');
+            $('.modal__title__small__text:visible').hide();
+            $('.modal-body:visible').html(`
+            <h3 class="text text-info">
+              Обращение зарегистрировано, идентификатор заявки ${id}
+            </h3>
+            <p class="text text-primary py-3">
+              В ближайшее время с Вами свяжется наш специалист
+            </p>
+            `);
+            $('.modal-footer:visible').hide();
+          }
 
-  //   $.fn.uploader = function (options) {
-  //     var settings = $.extend({
-  //       MessageAreaText: "Вы не выбрали файл.",
-  //       // MessageAreaTextWithFiles: "Загруженные файлы:",
-  //       DefaultErrorMessage: "Невозможно открыть этот файл.",
-  //       BadTypeErrorMessage: "Не верный формат файла!",
-  //       acceptedFileTypes: ['pdf', 'jpg', 'doc', 'docx']
-  //     }, options);
+          if (response['errors']) {
+            $('.invalid-feedback').remove();
+            $('.border').each(function() {
+              $(this).removeClass('border border-danger');
+            });
+            for (let key in response['errors']) {
+              // remove all red borders
+              // $('.border-danger').removeClass('is-invalid border border-danger');
+              // $('.invalid-feedback:visible').hide();
+              console.log(
+                key, ":", response['errors'][key]
+                );
+              let form = $("#order_form");
+              let element = form.find(`input[name="${key}"]`);
 
-  //     var uploadId = 1;
-  //     //update the messaging
-  //     $('.file-uploader__message-area p').text(options.MessageAreaText || settings.MessageAreaText);
+              // element.after(`<small class="text-danger">${response['errors'][key]}</small>`);
+              element.addClass('is-invalid border border-danger');
+              element.after(`<div class="invalid-feedback">${response['errors'][key]}</div>`);
+              if (key == 'captcha') {
+                let captcha_div = $('#order_captcha_check');
+                captcha_div.addClass('border border-danger');
+                captcha_div.css("border-radius", "3px");
+                $('#order_captcha_message').html(
+                `<p class="text text-danger">
+                  ${response['errors'][key]}
+                </p>`
+                )}
+            }
+          }
+        }
+      )
+      .fail(response=>{
+        console.log('fail');
+        console.log(response);
+        }
+      );
+  });
 
-  //     //create and add the file list and the hidden input list
-  //     var fileList = $('<ul class="file-list"></ul>');
-  //     var hiddenInputs = $('<div class="hidden-inputs hidden"></div>');
-  //     $('.file-uploader__message-area').after(fileList);
-  //     $('.file-list').after(hiddenInputs);
-
-  //     //when choosing a file, add the name to the list and copy the file input into the hidden inputs
-  //     $('.file-chooser__input').on('change', function () {
-  //       var file = $('.file-chooser__input').val();
-  //       var fileName = (file.match(/([^\\\/]+)$/)[0]);
-
-  //       //clear any error condition
-  //       $('.file-chooser').removeClass('error');
-  //       $('.error-message').remove();
-
-  //       //validate the file
-  //       var check = checkFile(fileName);
-  //       if (check === "valid") {
-
-  //         // move the 'real' one to hidden list
-  //         $('.hidden-inputs').append($('.file-chooser__input'));
-
-  //         //insert a clone after the hiddens (copy the event handlers too)
-  //         $('.file-chooser').append($('.file-chooser__input').clone({ withDataAndEvents: true }));
-
-  //         //add the name and a remove button to the file-list
-  //         $('.file-list').append('<li style="display: none;"><span class="file-list__name">' + fileName + '</span><button class="removal-button" data-uploadid="' + uploadId + '"></title></button></li>');
-  //         $('.file-list').find("li:last").show(800);
-
-  //         //removal button handler
-  //         $('.removal-button').on('click', function (e) {
-  //           e.preventDefault();
-
-  //           //remove the corresponding hidden input
-  //           $('.hidden-inputs input[data-uploadid="' + $(this).data('uploadid') + '"]').remove();
-
-  //           //remove the name from file-list that corresponds to the button clicked
-  //           $(this).parent().hide("puff").delay(10).queue(function () { $(this).remove(); });
-
-  //           //if the list is now empty, change the text back
-  //           if ($('.file-list li').length === 0) {
-  //             $('.file-uploader__message-area').text(options.MessageAreaText || settings.MessageAreaText);
-  //           }
-  //         });
-
-  //         //so the event handler works on the new "real" one
-  //         $('.hidden-inputs .file-chooser__input').removeClass('file-chooser__input').attr('data-uploadId', uploadId);
-
-  //         //update the message area
-  //         $('.file-uploader__message-area').text(options.MessageAreaTextWithFiles || settings.MessageAreaTextWithFiles);
-
-  //         uploadId++;
-
-  //       } else {
-  //         //indicate that the file is not ok
-  //         $('.file-chooser').addClass("error");
-  //         var errorText = options.DefaultErrorMessage || settings.DefaultErrorMessage;
-
-  //         if (check === "badFileName") {
-  //           errorText = options.BadTypeErrorMessage || settings.BadTypeErrorMessage;
-  //         }
-
-  //         $('.file-chooser__input').after('<p class="error-message">' + errorText + '</p>');
-  //       }
-  //     });
-
-  //     var checkFile = function (fileName) {
-  //       var accepted = "invalid",
-  //         acceptedFileTypes = this.acceptedFileTypes || settings.acceptedFileTypes,
-  //         regex;
-
-  //       for (var i = 0; i < acceptedFileTypes.length; i++) {
-  //         regex = new RegExp("\\." + acceptedFileTypes[i] + "$", "i");
-
-  //         if (regex.test(fileName)) {
-  //           accepted = "valid";
-  //           break;
-  //         } else {
-  //           accepted = "badFileName";
-  //         }
-  //       }
-
-  //       return accepted;
-  //     };
-  //   };
-  // }(jQuery));
-
-  // //init
-  // $(document).ready(function () {
-  //   $('.fileUploader').uploader({
-  //     MessageAreaText: "Прикрепить файлы"
-  //   });
-  // });
 
 
 });
