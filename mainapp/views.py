@@ -52,7 +52,7 @@ def accept_order(request):
                     order_arr.append(key)
 
             if '8000' not in current_absolute_url:
-                if Profile.objects.first() is not None:
+                if OrderEmail.objects.first() is not None:
                     # admin_email_address = Profile.objects.first().org_order_email.split(" ")
                     admin_email_address = [addr.email for addr in OrderEmail.objects.all()]
                 else:
