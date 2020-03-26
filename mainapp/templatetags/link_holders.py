@@ -54,5 +54,6 @@ def chunk(code, parameter=None):
                 return mark_safe(getattr(chunk, attribute))
     except Chunk.DoesNotExist:
         chunk = 'Создайте в админке вставку с кодом {}'.format(code)
+        return chunk
     return chunk.html
 

@@ -102,3 +102,4 @@ server/
 *style.css.map
 static_root/
 .vscode/
+*.json

@@ -32,6 +32,22 @@ DEBUG = True
 # ALLOWED_HOSTS = ['ac_ufa_site.minml.ru']
 ALLOWED_HOSTS = ['*']
 
+# WORKING_LOCAL = False
+
+# if WORKING_LOCAL is True:
+#         PROJECT_NAME = 'ac_template_site'
+# else:
+#     with open("project.json") as project_file:
+#         PROJECT_NAME = json.load(project_file)['project_name']
+#         email_folder_path = os.path.join(os.getcwd(), 'media', 'email_out')
+#         if not os.path.exists(email_folder_path):
+#             os.mkdir(email_folder_path)
+
+# try:
+#     with open('project.json', 'r') as project_json:
+#         COLORS = json.load(project_json)["colors"]
+# except Exception as e:
+#     print('ERROR PROJECT FILE', e)
 
 # Application definition
 
@@ -43,11 +59,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mainapp',
+    # 'qualsection',
     'ckeditor',
     'ckeditor_uploader',
     'sass_processor',
     'captcha',
+    'stdimage',
 ]
+
+FILE_UPLOAD_PERMISSIONS = 0o644
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -72,9 +93,15 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                # 'mainapp.context_processors.menu_urls',
-                'mainapp.context_processors.footer_news',
-                'mainapp.context_processors.order_form',
+                # 'mainapp.context_processors.profile_chunks',
+                # 'mainapp.context_processors.profile_import',
+                # 'mainapp.context_processors.services',
+                # 'mainapp.context_processors.basement_news',
+                # 'mainapp.context_processors.site_configuration',
+                # 'mainapp.context_processors.partners',
+                # 'mainapp.context_processors.order_form',
+                # 'mainapp.context_processors.org_staff',
+                # 'mainapp.context_processors.attestats',
             ],
         },
     },
@@ -133,16 +160,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static_root/'
+# STATIC_URL = '/static/'
 SASS_PROCESSOR_ENABLED = True
 SASS_PROCESSOR_AUTO_INCLUDE = False
 SASS_PROCESSOR_INCLUDE_FILE_PATTERN = r'^.+\.scss$'
 # SASS_OUTPUT_STYLE = 'compact'
 
-SASS_PRECISION = 8
+SASS_PRECISION = 10
 SASS_ROOT = os.path.join(BASE_DIR, 'assets')
 SASS_PROCESSOR_ROOT = SASS_ROOT
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
-
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
@@ -224,7 +251,6 @@ CKEDITOR_CONFIGS = {
     }
 }
 
-
 ####################################
 ###  DJANGO-RESIZED CONFIGURATION ##
 ####################################
@@ -234,7 +260,6 @@ DJANGORESIZED_DEFAULT_KEEP_META = True
 DJANGORESIZED_DEFAULT_FORCE_FORMAT = 'JPEG'
 DJANGORESIZED_DEFAULT_FORMAT_EXTENSIONS = {'JPEG': ".jpg"}
 DJANGORESIZED_DEFAULT_NORMALIZE_ROTATION = True
-
 
 #####################################
 ### SEND_MAIL_SETTINGS ##############
