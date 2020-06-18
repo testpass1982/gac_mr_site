@@ -333,3 +333,54 @@ class OrderEmail(models.Model):
 
     def __str__(self):
         return self.email
+
+
+class Profile(models.Model):
+    """class for templating organization"""
+    org_logotype = models.ImageField(u'Логотип организации', upload_to='upload/', blank=True, null=True, default=None)
+    org_footer_logotype = models.ImageField(
+        u'Логотип для футера (необязательно)',
+        upload_to='upload/', blank=True, null=True, default=None)
+    org_short_name = models.CharField(u'Краткое название организации', max_length=100, blank=True, null=True, default=None)
+    org_full_name = models.CharField(u'Полное название организации', max_length=300, blank=True, null=True, default=None)
+    org_intro = models.TextField(u'Текст для главной страницы', blank=True, null=True, default=None)
+    org_history = models.TextField(u'История организаици', blank=True, null=True, default=None)
+    # phone1 for header
+    org_main_phone = models.CharField(u'Главный телефон организации (используется в хедере)', max_length=200, blank=True, null=True, default=None)
+    org_main_phone_text = models.CharField(u'Подпись под телефоном в хедере, например "Многоканальный"', max_length=200, blank=True, null=True, default=None)
+    # phone2 for header
+    org_secondary_phone = models.CharField(u'Второй телефон организации (используется в хедере)', max_length=200, blank=True, null=True, default=None)
+    org_secondary_phone_text = models.CharField(u'Подпись под вторым телефоном в хедере, например "Бухгалтерия"', max_length=200, blank=True, null=True, default=None)
+    org_phones = models.TextField(u'Телефоны', blank=True, null=True, default=None)
+    org_email = models.TextField(u'Адрес электронной почты', blank=True, null=True, default=None)
+    org_order_email = models.CharField(u'Адреса для подключения формы заявки', max_length=100, blank=True, null=True, default=None)
+    org_header_emails = models.TextField(u'Адреса электронной почты (для хедера)', blank=True, null=True, default=None)
+    org_header_phones = models.TextField(u'Телефоны (для хедера)', blank=True, null=True, default=None)
+    org_address = models.TextField(u'Адрес местоположения организации', null=True, blank=True, default=None)
+    org_address_map_link = models.CharField(u'Ссылка на карту', blank=True, null=True, default=None, max_length=500)
+    org_work_time = models.CharField(u'Время работы организации', null=True, blank=True, default=None, max_length=100)
+    org_csp_code = models.CharField(u'шифр ЦСП (необязательно)', max_length=20, null=True, blank=True)
+    org_csp_reestr_link = models.URLField(u'Ссылка на реестр ЦСП', blank=True, null=True)
+    org_acsp_code = models.CharField(u'шифр АЦСП (необязательно)', max_length=20, null=True, blank=True)
+    org_acsp_reestr_link = models.URLField(u'Ссылка на реестр АЦСП', blank=True, null=True)
+    org_acsm_code = models.CharField(u'шифр АЦСМ (необязательно)', max_length=20, null=True, blank=True)
+    org_acsm_reestr_link = models.URLField(u'Ссылка на реестр АЦСМ', blank=True, null=True)
+    org_acso_code = models.CharField(u'шифр АЦСО (необязательно)', max_length=20, null=True, blank=True)
+    org_acso_reestr_link = models.URLField(u'Ссылка на реестр АЦСО', blank=True, null=True)
+    org_acst_code = models.CharField(u'шифр АЦСТ (необязательно)', max_length=20, null=True, blank=True)
+    org_acst_reestr_link = models.URLField(u'Ссылка на реестр АЦСТ', blank=True, null=True)
+    org_cok_code = models.CharField(u'шифр ЦОК (необязательно)', max_length=20, null=True, blank=True)
+    org_cok_reestr_link = models.URLField(u'Ссылка на реестр ЦОК', blank=True, null=True)
+    add_ap_list = models.BooleanField(u'Добавить ссылку на список пунктов', default=False)
+    add_schedule = models.BooleanField(u'Добавить ссылку на график аттестации', default=False)
+    counterjs = models.TextField(u'Код счетчика', blank=True, null=True, default=None, max_length=1500)
+    counter_ID = models.CharField(u'ID счетчика Яндекс.Метрики', blank=True, null=True, max_length=20)
+    counter_js_goal1 = models.CharField(u'JS код счетчика (1)', max_length=500, null=True, blank=True)
+    counter_js_goal2 = models.CharField(u'JS код счетчика (2)', max_length=500, null=True, blank=True)
+    number = models.SmallIntegerField(u'Порядок сортировки', null=True, blank=True)
+    class Meta:
+        verbose_name = 'Профиль организации'
+        verbose_name_plural = 'Профили организации'
+
+    def __str__(self):
+        return self.org_short_name
