@@ -8,22 +8,19 @@
 
                     <div class="col-sm-6 col-xl-3">
                         <a href="{% url 'index' %}">
-                            <img src="{% static 'img/logo_gac_rb.png' %}" class="logo_ac" alt="">
+                            <img src="{{ profile.org_logotype.url }}" class="logo_ac" alt="">
                         </a>
                     </div>
                     <div class="col-sm-2 col-xl-1">
                         <div class="logo_ac_mob">
-                            <a href="{% url 'index' %}">
-                                <img src="{% static 'img/ac_ctc_logo.png' %}" class="logo_ac_2" alt="">
 
-                            </a>
                         </div>
                     </div>
                     <div class="col-sm-3 col-xl-2 remove">
                         <div class="header_phone">
-                            <a href="tel: 8(347) 246-87-26" title="Позвонить">
+                            <a href="tel: {{ profile.org_main_phone }}" title="Позвонить">
                                 <p class="text_phone">
-                                    8(347) 246-87-26
+                                    {{ profile.org_main_phone }}
                                 </p>
                             </a>
                             <p class="text_phone_consultant">
@@ -65,21 +62,18 @@
                 <div class="col-xl-12">
                     <div class="headline_bg">
                         <p class="head_bg_text">
-                            ООО "ГАЦ РБ" и ООО "АЦ СТС"
+                            {{ profile.org_short_name }}
                         </p>
                         <p class="head_bg_text_two">
-                            Аттестация сварочного производства и оценка квалификации в области сварки в Республике Башкортостан
+                            {{ profile.org_intro }}
                         </p>
 
                         <p class="head_bg_text_small_two">
-                            Общество с ограниченной ответственностью «Головной аттестационно - сертификационный центр
-                            Республики Башкортостан» осуществляет деятельность в области аттестации сварочного
+                            {{ profile.org_full_name }} осуществляет деятельность в области аттестации сварочного
                             производства САСв и оценки квалификаций в области сварки.
                         </p>
                         <p class="head_bg_text_small_two">
-                            Общество с ограниченной ответственностью «АЦ СваркаТехСервис» осуществляет деятельность в
-                            области аттестации сварочных
-                            материалов, оборудования и технологий САСв.
+                            {{ profile.org_history }}
                         </p>
                         <div class="head_bg_box_button">
                             <button class="request">
@@ -105,7 +99,7 @@
                                 </button></p>
                         </div>
                         <p class="sro_np_naks_text">
-                            Наши организации являются членами <br>
+                            Наша организация является членом <br>
                             СРО Ассоциация «НАКС».
                         </p>
                         <p class="naks_link">

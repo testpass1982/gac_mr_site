@@ -13,7 +13,7 @@ if os.name != 'nt':
     env.hosts = ['server']
     env.user = env.local_user
 
-PROJECT_NAME = 'ac_ufa_site'
+PROJECT_NAME = 'ac_gacmr_site'
 PROJECT_FOLDER = '/home/{}/{}'.format(env.user, PROJECT_NAME)
 env.activate = 'source /home/{}/django2/bin/activate'.format(env.user)
 

@@ -76,7 +76,7 @@ def accept_order(request):
 
 def index(request):
     #TODO:  сделать когда-нибудь вывод форм на глваную
-    title = 'НАКС Уфа'
+    title = Profile.objects.first().org_short_name or 'Аттестационный центр'
     """this is mainpage view with forms handler and adapter to messages"""
     # tracker = MessageTracker()
     if request.method == 'POST':

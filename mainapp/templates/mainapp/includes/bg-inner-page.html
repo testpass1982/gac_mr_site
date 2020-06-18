@@ -8,22 +8,18 @@
 
                     <div class="col-sm-6 col-xl-3">
                         <a href="{% url 'index' %}">
-                            <img src="{% static 'img/logo_gac_rb.png' %}" class="logo_ac" alt="">
+                            <img src="{{ profile.org_logotype }}" class="logo_ac" alt="">
                         </a>
                     </div>
                     <div class="col-sm-2 col-xl-1">
                         <div class="logo_ac_mob">
-                            <a href="{% url 'index' %}">
-                                <img src="{% static 'img/ac_ctc_logo.png' %}" class="logo_ac_2" alt="">
-
-                            </a>
                         </div>
                     </div>
                     <div class="col-sm-3 col-xl-2">
                         <div class="header_phone">
-                            <a href="tel: 8(347) 246-87-26" title="Позвонить">
+                            <a href="tel: {{ profile.org_main_phone }}" title="Позвонить">
                                 <p class="text_phone">
-                                    8(347) 246-87-26
+                                    {{ profile.org_main_phone }}
                                 </p>
                             </a>
                             <p class="text_phone_consultant">
@@ -51,7 +47,7 @@
                     <div class="col-sm-2 col-xl-1">
                         <div class="header_sasv">
                             <img src="{% static '/img/logo_sasv.png' %}"
-                                title="Организации допущены к выполнению работ по аттестации сварочного производства"
+                                title="Организация допущена к выполнению работ по аттестации сварочного производства"
                                 class="logo_sasv" alt="">
                         </div>
                     </div>

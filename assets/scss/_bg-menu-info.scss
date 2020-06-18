@@ -4,7 +4,21 @@
 }
 
 .bg-color {
-    background-color: #212944a4;
+    background-color: rgba(#302925, 0.7);
+    display: block;
+    position: relative;
+    &:after {
+        content: "";
+        background: url(/static_root/img/bcg1.png) no-repeat;
+        background-size: cover;
+        opacity: 0.5;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+    }
 }
 
 .header_box {
@@ -144,20 +158,20 @@
 }
 
 .logo_ac {
-    width: 270px;
+    // width: 270px;
 
     @media screen and (max-width: 992px) {
-        width: 270px;
+        // width: 270px;
         margin-top: 15px;
         margin-bottom: 15px;
     }
 }
 
 .logo_ac_2 {
-    width: 70px;
+    // width: 70px;
 
     @media screen and (max-width: 1200px) {
-        width: 70px;
+        // width: 70px;
         margin-top: 15px;
         margin-bottom: 15px;
     }
@@ -185,7 +199,7 @@
 // Menu
 .menu__background {
     padding: 20px 0px 20px 30px;
-    background-color: #fff;
+    background-color: #103F54;
     // border-radius: 7px;   
     @media screen and (max-width: 992px) {
         padding: 5px 0px;
@@ -229,7 +243,7 @@
 
 .menu__navbar .navbar .nav-item .nav-link {
     padding: 0;
-    color: #272727;
+    color: #EAF7CF;
 
     // font-weight: 450;
     &:hover {

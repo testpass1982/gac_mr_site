@@ -1,4 +1,4 @@
-from .models import Menu, Post
+from .models import Menu, Post, Profile, Phone
 from .forms import OrderForm
 
 
@@ -21,3 +21,13 @@ def footer_news(request):
 def order_form(request):
     order_form = OrderForm()
     return {'order_form': order_form}
+
+
+def profile_chunks(request):
+    profile = Profile.objects.first()
+    profile_obj = {'profile': profile}
+    if Phone.objects.count() > 0:
+        profile_obj.update({'phones': Phone.objects.all().order_by('sort')})
+    return profile_obj
+
+
