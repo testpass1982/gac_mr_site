@@ -393,3 +393,16 @@ class Phone(models.Model):
 
     def __str__(self):
         return self.number
+
+
+class Partner(models.Model):
+    title = models.CharField(u'Название партнера', max_length=60)
+    logo = models.ImageField(u'Логотип партнера', upload_to="upload/")
+    number = models.SmallIntegerField(u'Порядок вывода на сайт')
+
+    class Meta:
+        verbose_name = 'Партнер'
+        verbose_name_plural = 'Партнеры'
+
+    def __str__(self):
+        return self.title

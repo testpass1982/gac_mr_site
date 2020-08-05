@@ -133,6 +133,10 @@ class OrderServiceAdmin(admin.ModelAdmin):
     list_display = ['id', 'name', 'phone', 'ready', 'compound']
     fields = ['name', 'phone', 'compound', 'ready']
 
+@admin.register(Partner)
+class PartnerAdmin(admin.ModelAdmin):
+    list_display = ['title', 'number']
+
 admin.site.register(Profstandard)
 admin.site.register(OrderEmail)
 # admin.site.register(OrderService)

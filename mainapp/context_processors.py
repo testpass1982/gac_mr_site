@@ -1,4 +1,4 @@
-from .models import Menu, Post, Profile, Phone
+from .models import Menu, Post, Profile, Phone, Partner
 from .forms import OrderForm
 
 
@@ -29,5 +29,14 @@ def profile_chunks(request):
     if Phone.objects.count() > 0:
         profile_obj.update({'phones': Phone.objects.all().order_by('sort')})
     return profile_obj
+
+def partners(request):
+    try:
+        partners = Partner.objects.all().order_by('number')
+    except Exception as e:
+        print('PARTNERS ERROR:', e)
+        partners = [{'partner': {'title': 'Загрузите партнеров в админку'}}]
+    # import pdb; pdb.set_trace()
+    return {'partners': partners}
 
 

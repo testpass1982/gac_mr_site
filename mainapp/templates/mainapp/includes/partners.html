@@ -12,16 +12,18 @@
                     Наши партнеры
                 </p>
                 <p class="subtitle">
-                    Многолетнее сотрудничество с крупными организациями
+                    Многолетнее сотрудничество в области сварочного производства
                 </p>
             </div>
         </div>
         <div class="row align-items-center">
             <div class="owl-carousel owl-theme">
-                <div class="img-item img-fluid">
-                    <img src="{% static '/img/transneft.png' %}" alt="">
-                </div>
-                <div class="img-item img-fluid">
+                {% for partner in partners %}
+                    <div class="img-item img-fluid">
+                        <img src="{{partner.logo.url}}" alt="{{partner.title}}">
+                    </div>
+                {% endfor %}
+                {% comment %} <div class="img-item img-fluid">
                     <img src="{% static '/img/mechel.png' %}" alt="">
                 </div>
                 <div class="img-item img-fluid">
@@ -32,7 +34,7 @@
                 </div>
                 <div class="img-item img-fluid">
                         <img src="{% static '/img/bsk.png' %}" alt="">
-                    </div>            
+                    </div>
                 <div class="img-item img-fluid">
                     <img src="{% static '/img/ural.png' %}" alt="">
                 </div>
@@ -47,13 +49,13 @@
                 </div>
                 <div class="img-item img-fluid">
                     <img src="{% static '/img/nefaz.png' %}" alt="">
-                </div>              
+                </div>
                 <div class="img-item img-fluid">
                     <img src="{% static '/img/bsk.png' %}" alt="">
-                </div>                
+                </div>
                 <div class="img-item img-fluid">
                     <img src="{% static '/img/bash.png' %}" alt="">
-                </div>
+                </div> {% endcomment %}
 
             </div>
 
