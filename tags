@@ -1,0 +1,492 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ALLOWED_HOSTS	ac_gacmr_site/settings.py	/^ALLOWED_HOSTS = ['*']$/;"	v
+ALOWED_TYPES	mainapp/forms.py	/^    ALOWED_TYPES = ['jpg', 'jpeg', 'doc', 'docx', 'pdf', 'xls', 'xlsx']$/;"	v	class:DocumentForm
+AUTH_PASSWORD_VALIDATORS	ac_gacmr_site/settings.py	/^AUTH_PASSWORD_VALIDATORS = [$/;"	v
+Article	mainapp/models.py	/^class Article(ContentMixin):$/;"	c
+ArticleAdmin	mainapp/admin.py	/^class ArticleAdmin(admin.ModelAdmin):$/;"	c
+ArticleForm	mainapp/forms.py	/^class ArticleForm(ContentForm):$/;"	c
+AskQuestionForm	mainapp/forms.py	/^class AskQuestionForm(forms.Form):$/;"	c
+BASE_DIR	ac_gacmr_site/settings.py	/^BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	v
+CKEDITOR_CONFIGS	ac_gacmr_site/settings.py	/^CKEDITOR_CONFIGS = {$/;"	v
+CKEDITOR_IMAGE_BACKEND	ac_gacmr_site/settings.py	/^CKEDITOR_IMAGE_BACKEND = "pillow"$/;"	v
+CKEDITOR_JQUERY_URL	ac_gacmr_site/settings.py	/^CKEDITOR_JQUERY_URL = 'https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/2.2.4\/jquery.min.js'$/;"	v
+CKEDITOR_UPLOAD_PATH	ac_gacmr_site/settings.py	/^CKEDITOR_UPLOAD_PATH = 'uploads\/'$/;"	v
+Category	mainapp/models.py	/^class Category(models.Model):$/;"	c
+Chunk	mainapp/models.py	/^class Chunk(models.Model):$/;"	c
+Command	mainapp/management/commands/fill_db.py	/^class Command(BaseCommand):$/;"	c
+Contact	mainapp/models.py	/^class Contact(models.Model):$/;"	c
+ContentForm	mainapp/forms.py	/^class ContentForm(forms.ModelForm):$/;"	c
+ContentMixin	mainapp/models.py	/^class ContentMixin(models.Model):$/;"	c
+DATABASES	ac_gacmr_site/settings.py	/^DATABASES = {$/;"	v
+DEBUG	ac_gacmr_site/settings.py	/^DEBUG = True$/;"	v
+DJANGORESIZED_DEFAULT_FORCE_FORMAT	ac_gacmr_site/settings.py	/^DJANGORESIZED_DEFAULT_FORCE_FORMAT = 'JPEG'$/;"	v
+DJANGORESIZED_DEFAULT_FORMAT_EXTENSIONS	ac_gacmr_site/settings.py	/^DJANGORESIZED_DEFAULT_FORMAT_EXTENSIONS = {'JPEG': ".jpg"}$/;"	v
+DJANGORESIZED_DEFAULT_KEEP_META	ac_gacmr_site/settings.py	/^DJANGORESIZED_DEFAULT_KEEP_META = True$/;"	v
+DJANGORESIZED_DEFAULT_NORMALIZE_ROTATION	ac_gacmr_site/settings.py	/^DJANGORESIZED_DEFAULT_NORMALIZE_ROTATION = True$/;"	v
+DJANGORESIZED_DEFAULT_QUALITY	ac_gacmr_site/settings.py	/^DJANGORESIZED_DEFAULT_QUALITY = 75$/;"	v
+DJANGORESIZED_DEFAULT_SIZE	ac_gacmr_site/settings.py	/^DJANGORESIZED_DEFAULT_SIZE = [1920, 1080]$/;"	v
+Document	mainapp/models.py	/^class Document(models.Model):$/;"	c
+DocumentAdmin	mainapp/admin.py	/^class DocumentAdmin(admin.ModelAdmin):$/;"	c
+DocumentForm	mainapp/forms.py	/^class DocumentForm(ContentForm):$/;"	c
+DocumentInline	mainapp/admin.py	/^class DocumentInline(admin.StackedInline):$/;"	c
+EMAIL_BACKEND	ac_gacmr_site/settings.py	/^EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'$/;"	v
+EMAIL_BACKEND	ac_gacmr_site/settings.py	/^EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'$/;"	v
+EMAIL_FILE_PATH	ac_gacmr_site/settings.py	/^EMAIL_FILE_PATH = 'email\/messages'$/;"	v
+EMAIL_HOST	ac_gacmr_site/settings.py	/^    EMAIL_HOST = email_settings['EMAIL_HOST']$/;"	v
+EMAIL_HOST_PASSWORD	ac_gacmr_site/settings.py	/^    EMAIL_HOST_PASSWORD = email_settings['EMAIL_HOST_PASSWORD']$/;"	v
+EMAIL_HOST_USER	ac_gacmr_site/settings.py	/^    EMAIL_HOST_USER = email_settings['EMAIL_HOST_USER']$/;"	v
+EMAIL_PORT	ac_gacmr_site/settings.py	/^    EMAIL_PORT = email_settings['EMAIL_PORT']$/;"	v
+EMAIL_USE_SSL	ac_gacmr_site/settings.py	/^EMAIL_USE_SSL = True/;"	v
+EmailNotifyer	mainapp/message_tracker.py	/^class EmailNotifyer(MessageNotifyer):$/;"	c
+FILE_UPLOAD_PERMISSIONS	ac_gacmr_site/settings.py	/^FILE_UPLOAD_PERMISSIONS = 0o644$/;"	v
+INSTALLED_APPS	ac_gacmr_site/settings.py	/^INSTALLED_APPS = [$/;"	v
+Importer	mainapp/registry_import.py	/^class Importer:$/;"	c
+LANGUAGE_CODE	ac_gacmr_site/settings.py	/^LANGUAGE_CODE = 'ru-RU'$/;"	v
+MEDIA_ROOT	ac_gacmr_site/settings.py	/^MEDIA_ROOT = os.path.join(BASE_DIR, 'media')$/;"	v
+MEDIA_URL	ac_gacmr_site/settings.py	/^MEDIA_URL = '\/media\/'$/;"	v
+MIDDLEWARE	ac_gacmr_site/settings.py	/^MIDDLEWARE = [$/;"	v
+MainappConfig	mainapp/apps.py	/^class MainappConfig(AppConfig):$/;"	c
+Menu	mainapp/models.py	/^class Menu(models.Model):$/;"	c
+Message	mainapp/models.py	/^class Message(models.Model):$/;"	c
+MessageAdmin	mainapp/admin.py	/^class MessageAdmin(admin.ModelAdmin):$/;"	c
+MessageModelAdapter	mainapp/adapters.py	/^class MessageModelAdapter:$/;"	c
+MessageNotifyer	mainapp/message_tracker.py	/^class MessageNotifyer:$/;"	c
+MessageTracker	mainapp/message_tracker.py	/^class MessageTracker:$/;"	c
+Meta	mainapp/forms.py	/^    class Meta(ContentForm.Meta):$/;"	c	class:ArticleForm
+Meta	mainapp/forms.py	/^    class Meta(ContentForm.Meta):$/;"	c	class:DocumentForm
+Meta	mainapp/forms.py	/^    class Meta(ContentForm.Meta):$/;"	c	class:PostForm
+Meta	mainapp/forms.py	/^    class Meta:$/;"	c	class:ContentForm
+Meta	mainapp/forms.py	/^    class Meta:$/;"	c	class:OrderForm
+Meta	mainapp/models.py	/^    class Meta:$/;"	c	class:Article
+Meta	mainapp/models.py	/^    class Meta:$/;"	c	class:Category
+Meta	mainapp/models.py	/^    class Meta:$/;"	c	class:Chunk
+Meta	mainapp/models.py	/^    class Meta:$/;"	c	class:Contact
+Meta	mainapp/models.py	/^    class Meta:$/;"	c	class:ContentMixin
+Meta	mainapp/models.py	/^    class Meta:$/;"	c	class:Document
+Meta	mainapp/models.py	/^    class Meta:$/;"	c	class:Menu
+Meta	mainapp/models.py	/^    class Meta:$/;"	c	class:Message
+Meta	mainapp/models.py	/^    class Meta:$/;"	c	class:OrderService
+Meta	mainapp/models.py	/^    class Meta:$/;"	c	class:Partner
+Meta	mainapp/models.py	/^    class Meta:$/;"	c	class:Post
+Meta	mainapp/models.py	/^    class Meta:$/;"	c	class:PostPhoto
+Meta	mainapp/models.py	/^    class Meta:$/;"	c	class:Profile
+Meta	mainapp/models.py	/^    class Meta:$/;"	c	class:Profstandard
+Meta	mainapp/models.py	/^    class Meta:$/;"	c	class:Registry
+Meta	mainapp/models.py	/^    class Meta:$/;"	c	class:Staff
+Meta	mainapp/models.py	/^    class Meta:$/;"	c	class:Tag
+Meta	mainapp/models.py	/^    class Meta:$/;"	c	class:WeldData
+Migration	mainapp/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	mainapp/migrations/0002_auto_20200805_0816.py	/^class Migration(migrations.Migration):$/;"	c
+OrderEmail	mainapp/models.py	/^class OrderEmail(models.Model):$/;"	c
+OrderForm	mainapp/forms.py	/^class OrderForm(forms.ModelForm):$/;"	c
+OrderService	mainapp/models.py	/^class OrderService(models.Model):$/;"	c
+OrderServiceAdmin	mainapp/admin.py	/^class OrderServiceAdmin(admin.ModelAdmin):$/;"	c
+PROJECT_FOLDER	fabfile.py	/^PROJECT_FOLDER = '\/home\/{}\/{}'.format(env.user, PROJECT_NAME)$/;"	v
+PROJECT_NAME	fabfile.py	/^PROJECT_NAME = 'ac_gacmr_site'$/;"	v
+Partner	mainapp/models.py	/^class Partner(models.Model):$/;"	c
+PartnerAdmin	mainapp/admin.py	/^class PartnerAdmin(admin.ModelAdmin):$/;"	c
+Phone	mainapp/models.py	/^class Phone(models.Model):$/;"	c
+Post	mainapp/models.py	/^class Post(ContentMixin):$/;"	c
+PostAdmin	mainapp/admin.py	/^class PostAdmin(admin.ModelAdmin):$/;"	c
+PostForm	mainapp/forms.py	/^class PostForm(ContentForm):$/;"	c
+PostPhoto	mainapp/models.py	/^class PostPhoto(models.Model):$/;"	c
+PostPhotoAdmin	mainapp/admin.py	/^class PostPhotoAdmin(admin.ModelAdmin):$/;"	c
+PostPhotoInline	mainapp/admin.py	/^class PostPhotoInline(admin.StackedInline):$/;"	c
+Profile	mainapp/models.py	/^class Profile(models.Model):$/;"	c
+Profstandard	mainapp/models.py	/^class Profstandard(models.Model):$/;"	c
+ROOT_URLCONF	ac_gacmr_site/settings.py	/^ROOT_URLCONF = 'ac_gacmr_site.urls'$/;"	v
+Registry	mainapp/models.py	/^class Registry(models.Model):$/;"	c
+RegistryRecordAdapter	mainapp/registry_import.py	/^class RegistryRecordAdapter:$/;"	c
+RegistryRecordMapper	mainapp/registry_import.py	/^class RegistryRecordMapper:$/;"	c
+SASS_PRECISION	ac_gacmr_site/settings.py	/^SASS_PRECISION = 10$/;"	v
+SASS_PROCESSOR_AUTO_INCLUDE	ac_gacmr_site/settings.py	/^SASS_PROCESSOR_AUTO_INCLUDE = False$/;"	v
+SASS_PROCESSOR_ENABLED	ac_gacmr_site/settings.py	/^SASS_PROCESSOR_ENABLED = True$/;"	v
+SASS_PROCESSOR_INCLUDE_DIRS	ac_gacmr_site/settings.py	/^SASS_PROCESSOR_INCLUDE_DIRS = [$/;"	v
+SASS_PROCESSOR_INCLUDE_FILE_PATTERN	ac_gacmr_site/settings.py	/^SASS_PROCESSOR_INCLUDE_FILE_PATTERN = r'^.+\\.scss$'$/;"	v
+SASS_PROCESSOR_ROOT	ac_gacmr_site/settings.py	/^SASS_PROCESSOR_ROOT = SASS_ROOT$/;"	v
+SASS_ROOT	ac_gacmr_site/settings.py	/^SASS_ROOT = os.path.join(BASE_DIR, 'assets')$/;"	v
+SMSNotifyer	mainapp/message_tracker.py	/^class SMSNotifyer(MessageNotifyer):$/;"	c
+STATICFILES_DIRS	ac_gacmr_site/settings.py	/^STATICFILES_DIRS = ($/;"	v
+STATICFILES_FINDERS	ac_gacmr_site/settings.py	/^STATICFILES_FINDERS = [$/;"	v
+STATIC_ROOT	ac_gacmr_site/settings.py	/^STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')$/;"	v
+STATIC_URL	ac_gacmr_site/settings.py	/^STATIC_URL = '\/static_root\/'$/;"	v
+STATUS_LIST	mainapp/models.py	/^    STATUS_LIST = ($/;"	v	class:Message
+STATUS_LIST	mainapp/models.py	/^    STATUS_LIST = ((0, 'new'), (1, 'published'))$/;"	v	class:Registry
+SearchRegistryForm	mainapp/forms.py	/^class SearchRegistryForm(forms.Form):$/;"	c
+SendMessageForm	mainapp/forms.py	/^class SendMessageForm(forms.Form):$/;"	c
+Staff	mainapp/models.py	/^class Staff(models.Model):$/;"	c
+SubscribeForm	mainapp/forms.py	/^class SubscribeForm(forms.Form):$/;"	c
+TEMPLATES	ac_gacmr_site/settings.py	/^TEMPLATES = [$/;"	v
+TIME_ZONE	ac_gacmr_site/settings.py	/^TIME_ZONE = 'UTC'$/;"	v
+Tag	mainapp/models.py	/^class Tag(models.Model):$/;"	c
+USE_I18N	ac_gacmr_site/settings.py	/^USE_I18N = True$/;"	v
+USE_L10N	ac_gacmr_site/settings.py	/^USE_L10N = True$/;"	v
+USE_TZ	ac_gacmr_site/settings.py	/^USE_TZ = True$/;"	v
+UrlMaker	mainapp/utilites.py	/^class UrlMaker:$/;"	c
+WSGI_APPLICATION	ac_gacmr_site/settings.py	/^WSGI_APPLICATION = 'ac_gacmr_site.wsgi.application'$/;"	v
+WeldData	mainapp/models.py	/^class WeldData(models.Model):$/;"	c
+__init__	mainapp/adapters.py	/^    def __init__(self, data):$/;"	m	class:MessageModelAdapter
+__init__	mainapp/forms.py	/^    def __init__(self, *args, **kwargs):$/;"	m	class:ContentForm
+__init__	mainapp/message_tracker.py	/^    def __init__(self):$/;"	m	class:MessageTracker
+__init__	mainapp/message_tracker.py	/^    def __init__(self, name):$/;"	m	class:EmailNotifyer
+__init__	mainapp/message_tracker.py	/^    def __init__(self, name):$/;"	m	class:SMSNotifyer
+__init__	mainapp/registry_import.py	/^    def __init__(self, args):$/;"	m	class:RegistryRecordAdapter
+__init__	mainapp/registry_import.py	/^    def __init__(self, url):$/;"	m	class:Importer
+__init__	mainapp/utilites.py	/^    def __init__(self, url, paginated_records):$/;"	m	class:UrlMaker
+__metaclass__	mainapp/message_tracker.py	/^    __metaclass__ = ABCMeta$/;"	v	class:MessageNotifyer
+__str__	mainapp/adapters.py	/^    def __str__(self):$/;"	m	class:MessageModelAdapter	file:
+__str__	mainapp/message_tracker.py	/^    def __str__(self):$/;"	m	class:EmailNotifyer	file:
+__str__	mainapp/message_tracker.py	/^    def __str__(self):$/;"	m	class:SMSNotifyer	file:
+__str__	mainapp/models.py	/^    def __str__(self):$/;"	m	class:Article	file:
+__str__	mainapp/models.py	/^    def __str__(self):$/;"	m	class:Category	file:
+__str__	mainapp/models.py	/^    def __str__(self):$/;"	m	class:Chunk	file:
+__str__	mainapp/models.py	/^    def __str__(self):$/;"	m	class:Contact	file:
+__str__	mainapp/models.py	/^    def __str__(self):$/;"	m	class:Document	file:
+__str__	mainapp/models.py	/^    def __str__(self):$/;"	m	class:Menu	file:
+__str__	mainapp/models.py	/^    def __str__(self):$/;"	m	class:Message	file:
+__str__	mainapp/models.py	/^    def __str__(self):$/;"	m	class:OrderEmail	file:
+__str__	mainapp/models.py	/^    def __str__(self):$/;"	m	class:OrderService	file:
+__str__	mainapp/models.py	/^    def __str__(self):$/;"	m	class:Partner	file:
+__str__	mainapp/models.py	/^    def __str__(self):$/;"	m	class:Phone	file:
+__str__	mainapp/models.py	/^    def __str__(self):$/;"	m	class:Post	file:
+__str__	mainapp/models.py	/^    def __str__(self):$/;"	m	class:PostPhoto	file:
+__str__	mainapp/models.py	/^    def __str__(self):$/;"	m	class:Profile	file:
+__str__	mainapp/models.py	/^    def __str__(self):$/;"	m	class:Profstandard	file:
+__str__	mainapp/models.py	/^    def __str__(self):$/;"	m	class:Registry	file:
+__str__	mainapp/models.py	/^    def __str__(self):$/;"	m	class:Staff	file:
+__str__	mainapp/models.py	/^    def __str__(self):$/;"	m	class:Tag	file:
+__unicode__	mainapp/models.py	/^    def __unicode__(self):$/;"	m	class:Category	file:
+__unicode__	mainapp/models.py	/^    def __unicode__(self):$/;"	m	class:Tag	file:
+abstract	mainapp/models.py	/^        abstract = True$/;"	v	class:ContentMixin.Meta
+abstract	mainapp/models.py	/^        abstract = True$/;"	v	class:WeldData.Meta
+accept_order	mainapp/views.py	/^def accept_order(request):$/;"	f
+add_ap_list	mainapp/models.py	/^    add_ap_list = models.BooleanField(u'Добавить ссылку на список пунктов', default=False)$/;"	v	class:Profile
+add_schedule	mainapp/models.py	/^    add_schedule = models.BooleanField(u'Добавить ссылку на график аттестации', default=False)$/;"	v	class:Profile
+all_news	mainapp/views.py	/^def all_news(request):$/;"	f
+allowed_extensions	mainapp/models.py	/^                                    allowed_extensions=[$/;"	v	class:Document
+application	ac_gacmr_site/wsgi.py	/^application = get_wsgi_application()$/;"	v
+args	mainapp/models.py	/^    args = PickledObjectField()$/;"	v	class:WeldData
+attrs	mainapp/forms.py	/^            attrs={'class': 'checkmark'}))$/;"	v	class:AskQuestionForm
+attrs	mainapp/forms.py	/^            attrs={'class': 'checkmark'}))$/;"	v	class:SendMessageForm
+attrs	mainapp/forms.py	/^            attrs={'class': 'main-footer__subscribe-email--input',$/;"	v	class:SubscribeForm
+attrs	mainapp/forms.py	/^            attrs={'class': 'modal__form_textarea'}))$/;"	v	class:AskQuestionForm
+attrs	mainapp/forms.py	/^            attrs={'class': 'modal__form_textarea'}))$/;"	v	class:SendMessageForm
+attrs	mainapp/forms.py	/^        attrs={'class': 'form-control'}))$/;"	v	class:SearchRegistryForm
+attrs	mainapp/forms.py	/^        attrs={'class': 'modal__form_input'}))$/;"	v	class:AskQuestionForm
+attrs	mainapp/forms.py	/^        attrs={'class': 'modal__form_input'}))$/;"	v	class:SendMessageForm
+author	mainapp/models.py	/^    author = models.ForeignKey($/;"	v	class:ContentMixin
+backup_data	fabfile.py	/^def backup_data():$/;"	f
+captcha	mainapp/forms.py	/^    captcha = CaptchaField()$/;"	v	class:OrderForm
+category	mainapp/models.py	/^    category = models.ForeignKey($/;"	v	class:Post
+center	mainapp/views.py	/^def center(request):$/;"	f
+check_if_already_loaded	mainapp/registry_import.py	/^    def check_if_already_loaded(self, record):$/;"	m	class:Importer
+check_if_exist	mainapp/registry_import.py	/^    def check_if_exist(self, record):$/;"	m	class:RegistryRecordMapper
+check_messages	mainapp/message_tracker.py	/^    def check_messages(self):$/;"	m	class:MessageTracker
+chunk	mainapp/templatetags/link_holders.py	/^def chunk(code, parameter=None):$/;"	f
+code	mainapp/models.py	/^    code = models.CharField(u'Уникальный код вставки', max_length=64, default='КОД_ВСТАВКИ')$/;"	v	class:Chunk
+comment	mainapp/forms.py	/^    comment = forms.CharField($/;"	v	class:AskQuestionForm
+comment	mainapp/forms.py	/^    comment = forms.CharField($/;"	v	class:SendMessageForm
+commit	fabfile.py	/^def commit():$/;"	f
+compound	mainapp/models.py	/^    compound = models.CharField(u'Состав заявки', max_length=300, default=None, blank=True, null=True)$/;"	v	class:OrderService
+counter_ID	mainapp/models.py	/^    counter_ID = models.CharField(u'ID счетчика Яндекс.Метрики', blank=True, null=True, max_length=20)$/;"	v	class:Profile
+counter_js_goal1	mainapp/models.py	/^    counter_js_goal1 = models.CharField(u'JS код счетчика (1)', max_length=500, null=True, blank=True)$/;"	v	class:Profile
+counter_js_goal2	mainapp/models.py	/^    counter_js_goal2 = models.CharField(u'JS код счетчика (2)', max_length=500, null=True, blank=True)$/;"	v	class:Profile
+counterjs	mainapp/models.py	/^    counterjs = models.TextField(u'Код счетчика', blank=True, null=True, default=None, max_length=1500)$/;"	v	class:Profile
+created_date	mainapp/models.py	/^    created_date = models.DateField(u'Дата получения', blank=True)$/;"	v	class:Registry
+created_date	mainapp/models.py	/^    created_date = models.DateTimeField($/;"	v	class:Document
+created_date	mainapp/models.py	/^    created_date = models.DateTimeField($/;"	v	class:Message
+created_date	mainapp/models.py	/^    created_date = models.DateTimeField(u'Дата создания', default=timezone.now)$/;"	v	class:ContentMixin
+date_parse	mainapp/registry_import.py	/^def date_parse(string):$/;"	f
+delete	mainapp/registry_import.py	/^    def delete(self, record):$/;"	m	class:RegistryRecordMapper
+dependencies	mainapp/migrations/0001_initial.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	mainapp/migrations/0002_auto_20200805_0816.py	/^    dependencies = [$/;"	v	class:Migration
+description	mainapp/models.py	/^    description = models.CharField(u'Описание', max_length=200, blank=False)$/;"	v	class:Contact
+details	mainapp/views.py	/^def details(request, content=None, pk=None):$/;"	f
+details_link	mainapp/models.py	/^    details_link = models.URLField(u'Ссылка на подробнее', null=True, blank=True)$/;"	v	class:Chunk
+doc	mainapp/views.py	/^def doc(request):$/;"	f
+doc_holder	mainapp/templatetags/link_holders.py	/^def doc_holder(url_code):$/;"	f
+doc_title	mainapp/templatetags/link_holders.py	/^def doc_title(url_code):$/;"	f
+document	mainapp/models.py	/^    document = models.FileField(u'Файл', upload_to='upload\/')$/;"	v	class:Profstandard
+document	mainapp/models.py	/^    document = models.FileField(verbose_name='Документ',$/;"	v	class:Document
+document_titles	mainapp/management/commands/fill_db.py	/^document_titles = [$/;"	v
+documents	mainapp/management/commands/fill_db.py	/^documents = [$/;"	v
+email	mainapp/forms.py	/^    email = forms.EmailField($/;"	v	class:SubscribeForm
+email	mainapp/forms.py	/^    email = forms.EmailField(widget=forms.EmailInput($/;"	v	class:AskQuestionForm
+email	mainapp/forms.py	/^    email = forms.EmailField(widget=forms.EmailInput($/;"	v	class:SendMessageForm
+email	mainapp/models.py	/^    email = models.EmailField($/;"	v	class:Contact
+email	mainapp/models.py	/^    email = models.EmailField(u'Адрес электронной почты')$/;"	v	class:OrderEmail
+email_settings	ac_gacmr_site/settings.py	/^    email_settings = json.loads(json_email_settings)$/;"	v
+error_messages	mainapp/forms.py	/^        error_messages={$/;"	v	class:AskQuestionForm
+experience	mainapp/models.py	/^    experience = models.CharField(u'Опыт работы', max_length=500, blank=True)$/;"	v	class:Staff
+extension	mainapp/models.py	/^    def extension(self):$/;"	m	class:Document
+extra	mainapp/admin.py	/^    extra = 0$/;"	v	class:DocumentInline
+extra	mainapp/admin.py	/^    extra = 0$/;"	v	class:PostPhotoInline
+field	mainapp/migrations/0001_initial.py	/^            field=models.ManyToManyField(to='mainapp.Tag', verbose_name='Тэги'),$/;"	v	class:Migration
+fields	mainapp/admin.py	/^    fields = [$/;"	v	class:PostAdmin
+fields	mainapp/admin.py	/^    fields = [$/;"	v	class:PostPhotoInline
+fields	mainapp/admin.py	/^    fields = ['id', "post", "image", "title", "position", get_picture_preview]$/;"	v	class:PostPhotoAdmin
+fields	mainapp/admin.py	/^    fields = ['id', "title", 'document']$/;"	v	class:DocumentInline
+fields	mainapp/admin.py	/^    fields = ['name', 'phone', 'compound', 'ready']$/;"	v	class:OrderServiceAdmin
+fields	mainapp/forms.py	/^        fields = ContentForm.Meta.fieldset['article_form_fields']$/;"	v	class:ArticleForm.Meta
+fields	mainapp/forms.py	/^        fields = ContentForm.Meta.fieldset['document_form_fields']$/;"	v	class:DocumentForm.Meta
+fields	mainapp/forms.py	/^        fields = ContentForm.Meta.fieldset['post_form_fields']$/;"	v	class:PostForm.Meta
+fields	mainapp/forms.py	/^        fields = ['name', 'phone', 'compound']$/;"	v	class:OrderForm.Meta
+fields	mainapp/migrations/0001_initial.py	/^            fields=[$/;"	v	class:Migration
+fields	mainapp/migrations/0002_auto_20200805_0816.py	/^            fields=[$/;"	v	class:Migration
+fieldset	mainapp/forms.py	/^        fieldset = {$/;"	v	class:ContentForm.Meta
+find_by	mainapp/registry_import.py	/^    def find_by(self, params, record):$/;"	m	class:RegistryRecordMapper
+find_by_id	mainapp/registry_import.py	/^    def find_by_id(self, record):$/;"	m	class:RegistryRecordMapper
+fio	mainapp/forms.py	/^    fio = forms.CharField(max_length=64, required=False, widget=forms.TextInput($/;"	v	class:SearchRegistryForm
+footer_news	mainapp/context_processors.py	/^def footer_news(request):$/;"	f
+get_absolute_url	mainapp/models.py	/^    def get_absolute_url(self):$/;"	m	class:Post
+get_data_from_url	mainapp/registry_import.py	/^    def get_data_from_url(self, url):$/;"	m	class:Importer
+get_edit_link	mainapp/admin.py	/^    def get_edit_link(self, obj=None):$/;"	m	class:PostPhotoInline
+get_image_filename	mainapp/models.py	/^def get_image_filename():$/;"	f
+get_latest_by	mainapp/models.py	/^        get_latest_by = ['created_date']$/;"	v	class:Article.Meta
+get_latest_by	mainapp/models.py	/^        get_latest_by = ['created_date']$/;"	v	class:Post.Meta
+get_picture_preview	mainapp/admin.py	/^def get_picture_preview(obj):$/;"	f
+get_tag_list	mainapp/admin.py	/^def get_tag_list(obj):$/;"	f
+get_url	mainapp/admin.py	/^def get_url(obj):$/;"	f
+getinstance	mainapp/message_tracker.py	/^    def getinstance(*args, **kwargs):$/;"	f	function:singleton
+handle	mainapp/management/commands/fill_db.py	/^    def handle(self, *args, **options):$/;"	m	class:Command
+home	ac_gacmr_site/settings.py	/^home = str(Path.home())$/;"	v
+html	mainapp/models.py	/^    html = RichTextUploadingField(u'Форматирование вставки')$/;"	v	class:Chunk
+image	mainapp/models.py	/^    image = models.ImageField(u'изображение', upload_to="upload\/")$/;"	v	class:PostPhoto
+images	mainapp/management/commands/fill_db.py	/^images = [$/;"	v
+index	mainapp/views.py	/^def index(request):$/;"	f
+info	mainapp/models.py	/^    info = models.CharField(u'Информация о стандарте(код)', max_length=300)$/;"	v	class:Profstandard
+initial	mainapp/migrations/0001_initial.py	/^    initial = True$/;"	v	class:Migration
+inlines	mainapp/admin.py	/^    inlines = [PostPhotoInline, DocumentInline]$/;"	v	class:PostAdmin
+insert	mainapp/registry_import.py	/^    def insert(self, record):$/;"	m	class:RegistryRecordMapper
+job	mainapp/models.py	/^    job = models.CharField(u'Должность', max_length=120, blank=False)$/;"	v	class:Staff
+json_email_settings	ac_gacmr_site/settings.py	/^    json_email_settings = f.read()$/;"	v
+link_holder	mainapp/templatetags/link_holders.py	/^def link_holder(url_code):$/;"	f
+list_display	mainapp/admin.py	/^    list_display = [$/;"	v	class:PostAdmin
+list_display	mainapp/admin.py	/^    list_display = ['id', 'name', 'phone', 'ready', 'compound']$/;"	v	class:OrderServiceAdmin
+list_display	mainapp/admin.py	/^    list_display = ['title', 'number']$/;"	v	class:PartnerAdmin
+list_display	mainapp/admin.py	/^    list_display = ['title', 'post', get_picture_preview]$/;"	v	class:PostPhotoAdmin
+list_display	mainapp/admin.py	/^    list_display = ['title', 'publish_on_main_page', 'created_date']$/;"	v	class:ArticleAdmin
+list_display	mainapp/admin.py	/^    list_display = ['title', 'publish_on_main_page']$/;"	v	class:DocumentInline
+list_display	mainapp/admin.py	/^    list_display = ['title', 'typeof', 'params', 'sender_email', 'status']$/;"	v	class:MessageAdmin
+list_display	mainapp/admin.py	/^    list_display = ['title', get_tag_list, 'publish_on_main_page']$/;"	v	class:DocumentAdmin
+logo	mainapp/models.py	/^    logo = models.ImageField(u'Логотип партнера', upload_to="upload\/")$/;"	v	class:Partner
+make_next_url	mainapp/utilites.py	/^    def make_next_url(self):$/;"	m	class:UrlMaker
+make_prev_url	mainapp/utilites.py	/^    def make_prev_url(self):$/;"	m	class:UrlMaker
+menu_urls	mainapp/management/commands/fill_db.py	/^menu_urls = [$/;"	v
+menu_urls_titles	mainapp/management/commands/fill_db.py	/^menu_urls_titles = [$/;"	v
+message	mainapp/models.py	/^                                        PDF, DOCX, DOC, JPG, JPEG")])$/;"	v	class:Document
+mintrud_prikaz	mainapp/models.py	/^    mintrud_prikaz = models.CharField(u'Приказ минтруда', max_length=100)$/;"	v	class:Profstandard
+model	mainapp/admin.py	/^    model = Document$/;"	v	class:DocumentInline
+model	mainapp/admin.py	/^    model = PostPhoto$/;"	v	class:PostPhotoInline
+model	mainapp/forms.py	/^        model = Article$/;"	v	class:ArticleForm.Meta
+model	mainapp/forms.py	/^        model = Document$/;"	v	class:DocumentForm.Meta
+model	mainapp/forms.py	/^        model = OrderService$/;"	v	class:OrderForm.Meta
+model	mainapp/forms.py	/^        model = Post$/;"	v	class:PostForm.Meta
+model_name	mainapp/migrations/0001_initial.py	/^            model_name='post',$/;"	v	class:Migration
+name	ac_gacmr_site/urls.py	/^        name='detailview'),$/;"	v
+name	mainapp/apps.py	/^    name = 'mainapp'$/;"	v	class:MainappConfig
+name	mainapp/forms.py	/^    name = forms.CharField(max_length=50, widget=forms.TextInput($/;"	v	class:AskQuestionForm
+name	mainapp/forms.py	/^    name = forms.CharField(max_length=50, widget=forms.TextInput($/;"	v	class:SendMessageForm
+name	mainapp/migrations/0001_initial.py	/^            name='Article',$/;"	v	class:Migration
+name	mainapp/migrations/0001_initial.py	/^            name='Category',$/;"	v	class:Migration
+name	mainapp/migrations/0001_initial.py	/^            name='Chunk',$/;"	v	class:Migration
+name	mainapp/migrations/0001_initial.py	/^            name='Contact',$/;"	v	class:Migration
+name	mainapp/migrations/0001_initial.py	/^            name='Document',$/;"	v	class:Migration
+name	mainapp/migrations/0001_initial.py	/^            name='Menu',$/;"	v	class:Migration
+name	mainapp/migrations/0001_initial.py	/^            name='Message',$/;"	v	class:Migration
+name	mainapp/migrations/0001_initial.py	/^            name='OrderEmail',$/;"	v	class:Migration
+name	mainapp/migrations/0001_initial.py	/^            name='OrderService',$/;"	v	class:Migration
+name	mainapp/migrations/0001_initial.py	/^            name='Partner',$/;"	v	class:Migration
+name	mainapp/migrations/0001_initial.py	/^            name='Phone',$/;"	v	class:Migration
+name	mainapp/migrations/0001_initial.py	/^            name='Post',$/;"	v	class:Migration
+name	mainapp/migrations/0001_initial.py	/^            name='PostPhoto',$/;"	v	class:Migration
+name	mainapp/migrations/0001_initial.py	/^            name='Profile',$/;"	v	class:Migration
+name	mainapp/migrations/0001_initial.py	/^            name='Profstandard',$/;"	v	class:Migration
+name	mainapp/migrations/0001_initial.py	/^            name='Registry',$/;"	v	class:Migration
+name	mainapp/migrations/0001_initial.py	/^            name='Staff',$/;"	v	class:Migration
+name	mainapp/migrations/0001_initial.py	/^            name='Tag',$/;"	v	class:Migration
+name	mainapp/migrations/0001_initial.py	/^            name='tags',$/;"	v	class:Migration
+name	mainapp/migrations/0002_auto_20200805_0816.py	/^            name='Partner',$/;"	v	class:Migration
+name	mainapp/models.py	/^    name = models.CharField(max_length=64)$/;"	v	class:Category
+name	mainapp/models.py	/^    name = models.CharField(max_length=64)$/;"	v	class:Tag
+name	mainapp/models.py	/^    name = models.CharField(u'Имя контакта', max_length=50)$/;"	v	class:OrderService
+name	mainapp/models.py	/^    name = models.CharField(u'ФИО', max_length=120, blank=False)$/;"	v	class:Staff
+news	mainapp/views.py	/^def news(request):$/;"	f
+news_titles	mainapp/management/commands/fill_db.py	/^news_titles = [$/;"	v
+news_two	mainapp/views.py	/^def news_two(request):$/;"	f
+next_url	mainapp/utilites.py	/^    next_url = ''$/;"	v	class:UrlMaker
+notify	mainapp/message_tracker.py	/^    def notify(self, messages):$/;"	m	class:EmailNotifyer
+notify	mainapp/message_tracker.py	/^    def notify(self, messages):$/;"	m	class:MessageNotifyer
+notify	mainapp/message_tracker.py	/^    def notify(self, messages):$/;"	m	class:SMSNotifyer
+notify_observers	mainapp/message_tracker.py	/^    def notify_observers(self):$/;"	m	class:MessageTracker
+null	mainapp/models.py	/^                             null=True)$/;"	v	class:Document
+null	mainapp/models.py	/^                             null=True)$/;"	v	class:PostPhoto
+number	mainapp/models.py	/^    number = models.CharField(u'Номер телефона', max_length=20)$/;"	v	class:Phone
+number	mainapp/models.py	/^    number = models.SmallIntegerField(u'Порядок вывода на сайт')$/;"	v	class:Partner
+number	mainapp/models.py	/^    number = models.SmallIntegerField(u'Порядок вывода на сайт', default=0)$/;"	v	class:Contact
+number	mainapp/models.py	/^    number = models.SmallIntegerField(u'Порядок сортировки')$/;"	v	class:Profstandard
+number	mainapp/models.py	/^    number = models.SmallIntegerField(u'Порядок сортировки', null=True, blank=True)$/;"	v	class:Profile
+ocenka_details	mainapp/views.py	/^def ocenka_details(request):$/;"	f
+on_delete	mainapp/models.py	/^                             on_delete=models.SET_NULL,$/;"	v	class:Document
+on_delete	mainapp/models.py	/^                             on_delete=models.SET_NULL,$/;"	v	class:PostPhoto
+operations	mainapp/migrations/0001_initial.py	/^    operations = [$/;"	v	class:Migration
+operations	mainapp/migrations/0002_auto_20200805_0816.py	/^    operations = [$/;"	v	class:Migration
+options	mainapp/migrations/0001_initial.py	/^            options={$/;"	v	class:Migration
+options	mainapp/migrations/0002_auto_20200805_0816.py	/^            options={$/;"	v	class:Migration
+order_form	mainapp/context_processors.py	/^def order_form(request):$/;"	f
+ordering	mainapp/models.py	/^        ordering = ['created_date']$/;"	v	class:Article.Meta
+ordering	mainapp/models.py	/^        ordering = ['created_date']$/;"	v	class:Post.Meta
+ordering	mainapp/models.py	/^        ordering = ['position']$/;"	v	class:PostPhoto.Meta
+org	mainapp/models.py	/^    org = models.CharField(u'Организация', max_length=120, blank=True)$/;"	v	class:Registry
+org_acsm_code	mainapp/models.py	/^    org_acsm_code = models.CharField(u'шифр АЦСМ (необязательно)', max_length=20, null=True, blank=True)$/;"	v	class:Profile
+org_acsm_reestr_link	mainapp/models.py	/^    org_acsm_reestr_link = models.URLField(u'Ссылка на реестр АЦСМ', blank=True, null=True)$/;"	v	class:Profile
+org_acso_code	mainapp/models.py	/^    org_acso_code = models.CharField(u'шифр АЦСО (необязательно)', max_length=20, null=True, blank=True)$/;"	v	class:Profile
+org_acso_reestr_link	mainapp/models.py	/^    org_acso_reestr_link = models.URLField(u'Ссылка на реестр АЦСО', blank=True, null=True)$/;"	v	class:Profile
+org_acsp_code	mainapp/models.py	/^    org_acsp_code = models.CharField(u'шифр АЦСП (необязательно)', max_length=20, null=True, blank=True)$/;"	v	class:Profile
+org_acsp_reestr_link	mainapp/models.py	/^    org_acsp_reestr_link = models.URLField(u'Ссылка на реестр АЦСП', blank=True, null=True)$/;"	v	class:Profile
+org_acst_code	mainapp/models.py	/^    org_acst_code = models.CharField(u'шифр АЦСТ (необязательно)', max_length=20, null=True, blank=True)$/;"	v	class:Profile
+org_acst_reestr_link	mainapp/models.py	/^    org_acst_reestr_link = models.URLField(u'Ссылка на реестр АЦСТ', blank=True, null=True)$/;"	v	class:Profile
+org_address	mainapp/models.py	/^    org_address = models.TextField(u'Адрес местоположения организации', null=True, blank=True, default=None)$/;"	v	class:Profile
+org_address_map_link	mainapp/models.py	/^    org_address_map_link = models.CharField(u'Ссылка на карту', blank=True, null=True, default=None, max_length=500)$/;"	v	class:Profile
+org_cok_code	mainapp/models.py	/^    org_cok_code = models.CharField(u'шифр ЦОК (необязательно)', max_length=20, null=True, blank=True)$/;"	v	class:Profile
+org_cok_reestr_link	mainapp/models.py	/^    org_cok_reestr_link = models.URLField(u'Ссылка на реестр ЦОК', blank=True, null=True)$/;"	v	class:Profile
+org_csp_code	mainapp/models.py	/^    org_csp_code = models.CharField(u'шифр ЦСП (необязательно)', max_length=20, null=True, blank=True)$/;"	v	class:Profile
+org_csp_reestr_link	mainapp/models.py	/^    org_csp_reestr_link = models.URLField(u'Ссылка на реестр ЦСП', blank=True, null=True)$/;"	v	class:Profile
+org_email	mainapp/models.py	/^    org_email = models.TextField(u'Адрес электронной почты', blank=True, null=True, default=None)$/;"	v	class:Profile
+org_footer_logotype	mainapp/models.py	/^    org_footer_logotype = models.ImageField($/;"	v	class:Profile
+org_full_name	mainapp/models.py	/^    org_full_name = models.CharField(u'Полное название организации', max_length=300, blank=True, null=True, default=None)$/;"	v	class:Profile
+org_header_emails	mainapp/models.py	/^    org_header_emails = models.TextField(u'Адреса электронной почты (для хедера)', blank=True, null=True, default=None)$/;"	v	class:Profile
+org_header_phones	mainapp/models.py	/^    org_header_phones = models.TextField(u'Телефоны (для хедера)', blank=True, null=True, default=None)$/;"	v	class:Profile
+org_history	mainapp/models.py	/^    org_history = models.TextField(u'История организаици', blank=True, null=True, default=None)$/;"	v	class:Profile
+org_intro	mainapp/models.py	/^    org_intro = models.TextField(u'Текст для главной страницы', blank=True, null=True, default=None)$/;"	v	class:Profile
+org_logotype	mainapp/models.py	/^    org_logotype = models.ImageField(u'Логотип организации', upload_to='upload\/', blank=True, null=True, default=None)$/;"	v	class:Profile
+org_main_phone	mainapp/models.py	/^    org_main_phone = models.CharField(u'Главный телефон организации (используется в хедере)', max_length=200, blank=True, null=True, default=None)$/;"	v	class:Profile
+org_main_phone_text	mainapp/models.py	/^    org_main_phone_text = models.CharField(u'Подпись под телефоном в хедере, например "Многоканальный"', max_length=200, blank=True, null=True, default=None)$/;"	v	class:Profile
+org_order_email	mainapp/models.py	/^    org_order_email = models.CharField(u'Адреса для подключения формы заявки', max_length=100, blank=True, null=True, default=None)$/;"	v	class:Profile
+org_phones	mainapp/models.py	/^    org_phones = models.TextField(u'Телефоны', blank=True, null=True, default=None)$/;"	v	class:Profile
+org_secondary_phone	mainapp/models.py	/^    org_secondary_phone = models.CharField(u'Второй телефон организации (используется в хедере)', max_length=200, blank=True, null=True, default=None)$/;"	v	class:Profile
+org_secondary_phone_text	mainapp/models.py	/^    org_secondary_phone_text = models.CharField(u'Подпись под вторым телефоном в хедере, например "Бухгалтерия"', max_length=200, blank=True, null=True, default=None)$/;"	v	class:Profile
+org_short_name	mainapp/models.py	/^    org_short_name = models.CharField(u'Краткое название организации', max_length=100, blank=True, null=True, default=None)$/;"	v	class:Profile
+org_work_time	mainapp/models.py	/^    org_work_time = models.CharField(u'Время работы организации', null=True, blank=True, default=None, max_length=100)$/;"	v	class:Profile
+params	mainapp/forms.py	/^    params = forms.CharField(required=False, max_length=128)$/;"	v	class:SendMessageForm
+params	mainapp/models.py	/^    params = models.CharField(u'Параметры сообщения',$/;"	v	class:Message
+params	mainapp/models.py	/^    params = models.CharField(u'Параметры',$/;"	v	class:Registry
+partners	mainapp/context_processors.py	/^def partners(request):$/;"	f
+pdata	mainapp/forms.py	/^    pdata = forms.BooleanField($/;"	v	class:AskQuestionForm
+pdata	mainapp/forms.py	/^    pdata = forms.BooleanField($/;"	v	class:SendMessageForm
+phone	mainapp/forms.py	/^    phone = forms.CharField(max_length=20, widget=forms.TextInput($/;"	v	class:AskQuestionForm
+phone	mainapp/forms.py	/^    phone = forms.CharField(max_length=20, widget=forms.TextInput($/;"	v	class:SendMessageForm
+phone	mainapp/models.py	/^    phone = models.CharField(u'Телефон контакта', max_length=50)$/;"	v	class:OrderService
+phone	mainapp/models.py	/^    phone = models.CharField(u'Телефон', max_length=64, blank=False)$/;"	v	class:Contact
+photo	mainapp/models.py	/^    photo = models.ImageField(u'Фотография', blank=True)$/;"	v	class:Staff
+political	mainapp/views.py	/^def political(request):$/;"	f
+popov_user	mainapp/management/commands/fill_db.py	/^    popov_user = User.objects.get(username='popov')$/;"	v
+popov_user	mainapp/management/commands/fill_db.py	/^    popov_user=User.objects.create(username='popov', email='popov@naks.ru', password='2011')$/;"	v
+position	mainapp/models.py	/^    position = models.PositiveIntegerField(u'Позиция', default=0)$/;"	v	class:PostPhoto
+post	mainapp/models.py	/^    post = models.ForeignKey(Post, verbose_name='Страница',$/;"	v	class:Document
+post	mainapp/models.py	/^    post = models.ForeignKey(Post, verbose_name=u'новость',$/;"	v	class:PostPhoto
+prev_url	mainapp/utilites.py	/^    prev_url = ''$/;"	v	class:UrlMaker
+priority	mainapp/models.py	/^    priority = models.SmallIntegerField(u'Приоритет', default=0)$/;"	v	class:Staff
+profile_chunks	mainapp/context_processors.py	/^def profile_chunks(request):$/;"	f
+profstandards	mainapp/management/commands/fill_db.py	/^profstandards = [$/;"	v
+profstandarti	mainapp/views.py	/^def profstandarti(request):$/;"	f
+publish	mainapp/models.py	/^    def publish(self):$/;"	m	class:Article
+publish	mainapp/models.py	/^    def publish(self):$/;"	m	class:Post
+publish_in_basement	mainapp/models.py	/^    publish_in_basement=models.BooleanField(u'Опубликовать в подвале на главной', default=False)$/;"	v	class:Post
+publish_on_main_page	mainapp/models.py	/^    publish_on_main_page = models.BooleanField($/;"	v	class:ContentMixin
+publish_on_main_page	mainapp/models.py	/^    publish_on_main_page = models.BooleanField($/;"	v	class:Document
+publish_on_news_page	mainapp/models.py	/^    publish_on_news_page = models.BooleanField($/;"	v	class:Post
+published_date	mainapp/models.py	/^    published_date = models.DateTimeField($/;"	v	class:ContentMixin
+push	fabfile.py	/^def push():$/;"	f
+readonly_fields	mainapp/admin.py	/^    readonly_fields = ['id', "get_edit_link", get_picture_preview]$/;"	v	class:PostPhotoInline
+readonly_fields	mainapp/admin.py	/^    readonly_fields = ['id', get_picture_preview]$/;"	v	class:PostPhotoAdmin
+readonly_fields	mainapp/admin.py	/^    readonly_fields = ['id', get_url]$/;"	v	class:PostAdmin
+ready	mainapp/models.py	/^    ready = models.BooleanField(u'Вопрос решен', default=False, blank=True, null=True)$/;"	v	class:OrderService
+reestr	mainapp/views.py	/^def reestr(request):$/;"	f
+reg_number	mainapp/models.py	/^    reg_number = models.CharField(u'Регистрационный номер', max_length=20)$/;"	v	class:Profstandard
+register	mainapp/templatetags/link_holders.py	/^register = template.Library()$/;"	v
+register_observer	mainapp/message_tracker.py	/^    def register_observer(self, observer):$/;"	m	class:MessageTracker
+related_name	mainapp/models.py	/^                             related_name='images',$/;"	v	class:PostPhoto
+save_data_to_db	mainapp/registry_import.py	/^    def save_data_to_db(self, record):$/;"	m	class:Importer
+save_to_message	mainapp/adapters.py	/^    def save_to_message(self):$/;"	m	class:MessageModelAdapter
+send_email	mainapp/message_tracker.py	/^    def send_email(self, message):$/;"	m	class:EmailNotifyer
+sender_email	mainapp/models.py	/^    sender_email = models.EmailField($/;"	v	class:Message
+sender_phone	mainapp/models.py	/^    sender_phone = models.CharField(u'Телефон', max_length=64, blank=True)$/;"	v	class:Message
+set_status	mainapp/models.py	/^    def set_status(self, status_code):$/;"	m	class:Message
+short_description	mainapp/models.py	/^    short_description = models.CharField($/;"	v	class:ContentMixin
+show_url	mainapp/admin.py	/^def show_url(obj):$/;"	f
+singleton	mainapp/message_tracker.py	/^def singleton(class_):$/;"	f
+sort	mainapp/models.py	/^    sort = models.SmallIntegerField(u'Сортировка')$/;"	v	class:Phone
+status	mainapp/models.py	/^    status = models.IntegerField(u'Статус', default=0, choices=STATUS_LIST)$/;"	v	class:Message
+status	mainapp/models.py	/^    status = models.IntegerField(u'Статус', default=0, choices=STATUS_LIST)$/;"	v	class:Registry
+tags	mainapp/models.py	/^    tags = models.ManyToManyField(Tag, verbose_name='Тэги')$/;"	v	class:ContentMixin
+tags	mainapp/models.py	/^    tags = models.ManyToManyField(Tag, verbose_name='Тэги', blank=True)$/;"	v	class:Document
+text	mainapp/models.py	/^    text = RichTextUploadingField(verbose_name='Текст')$/;"	v	class:ContentMixin
+title	mainapp/models.py	/^    title = models.CharField(u'Заголовок ссылки', max_length=60)$/;"	v	class:Menu
+title	mainapp/models.py	/^    title = models.CharField(u'Заголовок', max_length=64, blank=True)$/;"	v	class:Message
+title	mainapp/models.py	/^    title = models.CharField(u'Название вставки', max_length=64)$/;"	v	class:Chunk
+title	mainapp/models.py	/^    title = models.CharField(u'Название контакта', max_length=64, blank=False)$/;"	v	class:Contact
+title	mainapp/models.py	/^    title = models.CharField(u'Название партнера', max_length=60)$/;"	v	class:Partner
+title	mainapp/models.py	/^    title = models.CharField(u'Название профстандарта', max_length=200)$/;"	v	class:Profstandard
+title	mainapp/models.py	/^    title = models.CharField(u'Название телефона (например, бухгалтерия)', max_length=30, null=True, blank=True)$/;"	v	class:Phone
+title	mainapp/models.py	/^    title = models.CharField(u'Название', blank=True, max_length=100)$/;"	v	class:WeldData
+title	mainapp/models.py	/^    title = models.CharField(u'Название', max_length=200)$/;"	v	class:ContentMixin
+title	mainapp/models.py	/^    title = models.CharField(u'Название', max_length=500)$/;"	v	class:Document
+title	mainapp/models.py	/^    title = models.CharField(u'Название', max_length=64, blank=True)$/;"	v	class:Registry
+title	mainapp/models.py	/^    title = models.CharField(u'название', max_length=64,$/;"	v	class:PostPhoto
+title_holder	mainapp/templatetags/link_holders.py	/^def title_holder(url_code):$/;"	f
+typeof	mainapp/models.py	/^    typeof = models.CharField(u'Тип сообщения', max_length=64, blank=True)$/;"	v	class:Message
+typeof	mainapp/models.py	/^    typeof = models.CharField(u'Тип', max_length=64, blank=True)$/;"	v	class:Registry
+uid	mainapp/models.py	/^    uid = models.IntegerField(u'UID', unique=True, blank=True)$/;"	v	class:WeldData
+update	mainapp/registry_import.py	/^    def update(self, id, **params):$/;"	m	class:RegistryRecordMapper
+upload_to	mainapp/models.py	/^                                upload_to="documents\/",$/;"	v	class:Document
+upload_to	mainapp/models.py	/^def upload_to(instance, filename):$/;"	f
+uploaded_at	mainapp/models.py	/^    uploaded_at = models.DateTimeField($/;"	v	class:Document
+url	mainapp/models.py	/^    url = models.CharField(u'Адрес ссылки', max_length=200, default="НЕТ")$/;"	v	class:Menu
+url_code	mainapp/models.py	/^    url_code = models.CharField(u'Код ссылки', max_length=30)$/;"	v	class:Menu
+url_code	mainapp/models.py	/^    url_code = models.CharField(u'Код ссылки', max_length=30, blank=True, default='НЕ УКАЗАН')$/;"	v	class:ContentMixin
+url_code	mainapp/models.py	/^    url_code = models.CharField(u'Код ссылки', max_length=30, blank=True, default='НЕ УКАЗАН')$/;"	v	class:Document
+urlpatterns	ac_gacmr_site/urls.py	/^urlpatterns = [$/;"	v
+urls_dict	mainapp/utilites.py	/^    def urls_dict(self):$/;"	m	class:UrlMaker
+validators	mainapp/models.py	/^                                validators=[FileExtensionValidator($/;"	v	class:Document
+verbose_name	mainapp/models.py	/^        verbose_name = "Документ"$/;"	v	class:Document.Meta
+verbose_name	mainapp/models.py	/^        verbose_name = "Контакт"$/;"	v	class:Contact.Meta
+verbose_name	mainapp/models.py	/^        verbose_name = "Раздел"$/;"	v	class:Category.Meta
+verbose_name	mainapp/models.py	/^        verbose_name = "Сотрудник"$/;"	v	class:Staff.Meta
+verbose_name	mainapp/models.py	/^        verbose_name = "Ссылка"$/;"	v	class:Menu.Meta
+verbose_name	mainapp/models.py	/^        verbose_name = "Тэг"$/;"	v	class:Tag.Meta
+verbose_name	mainapp/models.py	/^        verbose_name = "Фото"$/;"	v	class:PostPhoto.Meta
+verbose_name	mainapp/models.py	/^        verbose_name = 'Вставка'$/;"	v	class:Chunk.Meta
+verbose_name	mainapp/models.py	/^        verbose_name = 'Запись реестра'$/;"	v	class:Registry.Meta
+verbose_name	mainapp/models.py	/^        verbose_name = 'Заявка'$/;"	v	class:OrderService.Meta
+verbose_name	mainapp/models.py	/^        verbose_name = 'Партнер'$/;"	v	class:Partner.Meta
+verbose_name	mainapp/models.py	/^        verbose_name = 'Профиль организации'$/;"	v	class:Profile.Meta
+verbose_name	mainapp/models.py	/^        verbose_name = 'Профстандарт'$/;"	v	class:Profstandard.Meta
+verbose_name	mainapp/models.py	/^        verbose_name = 'Сообщение'$/;"	v	class:Message.Meta
+verbose_name	mainapp/models.py	/^        verbose_name = 'Статья'$/;"	v	class:Article.Meta
+verbose_name	mainapp/models.py	/^        verbose_name = 'Страница'$/;"	v	class:Post.Meta
+verbose_name_plural	mainapp/models.py	/^        verbose_name_plural = "Документы"$/;"	v	class:Document.Meta
+verbose_name_plural	mainapp/models.py	/^        verbose_name_plural = "Контакты"$/;"	v	class:Contact.Meta
+verbose_name_plural	mainapp/models.py	/^        verbose_name_plural = "Разделы"$/;"	v	class:Category.Meta
+verbose_name_plural	mainapp/models.py	/^        verbose_name_plural = "Сотрудники"$/;"	v	class:Staff.Meta
+verbose_name_plural	mainapp/models.py	/^        verbose_name_plural = "Ссылки"$/;"	v	class:Menu.Meta
+verbose_name_plural	mainapp/models.py	/^        verbose_name_plural = "Статьи"$/;"	v	class:Article.Meta
+verbose_name_plural	mainapp/models.py	/^        verbose_name_plural = "Страницы"$/;"	v	class:Post.Meta
+verbose_name_plural	mainapp/models.py	/^        verbose_name_plural = "Тэги"$/;"	v	class:Tag.Meta
+verbose_name_plural	mainapp/models.py	/^        verbose_name_plural = "Фотографии"$/;"	v	class:PostPhoto.Meta
+verbose_name_plural	mainapp/models.py	/^        verbose_name_plural = 'Вставки'$/;"	v	class:Chunk.Meta
+verbose_name_plural	mainapp/models.py	/^        verbose_name_plural = 'Записи реестра'$/;"	v	class:Registry.Meta
+verbose_name_plural	mainapp/models.py	/^        verbose_name_plural = 'Заявки'$/;"	v	class:OrderService.Meta
+verbose_name_plural	mainapp/models.py	/^        verbose_name_plural = 'Партнеры'$/;"	v	class:Partner.Meta
+verbose_name_plural	mainapp/models.py	/^        verbose_name_plural = 'Профили организации'$/;"	v	class:Profile.Meta
+verbose_name_plural	mainapp/models.py	/^        verbose_name_plural = 'Профстандарты'$/;"	v	class:Profstandard.Meta
+verbose_name_plural	mainapp/models.py	/^        verbose_name_plural = 'Сообщения'$/;"	v	class:Message.Meta
+view_on_site	mainapp/admin.py	/^    def view_on_site(self, obj):$/;"	m	class:PostAdmin
+view_on_site	mainapp/admin.py	/^    view_on_site = True$/;"	v	class:PostAdmin
+widgets	mainapp/forms.py	/^        widgets = {$/;"	v	class:OrderForm.Meta
+work_place	mainapp/forms.py	/^    work_place = forms.CharField(max_length=64, required=False, widget=forms.TextInput($/;"	v	class:SearchRegistryForm

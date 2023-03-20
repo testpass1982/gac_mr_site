@@ -5,80 +5,70 @@
         <div class="container">
             <div class="header_box">
                 <div class="row align-items-center">
-
                     <div class="col-sm-6 col-xl-3">
                         <a href="{% url 'index' %}">
                             <img src="{{ profile.org_logotype.url }}" class="logo_ac" alt="">
                         </a>
                     </div>
                     <div class="col-sm-2 col-xl-1">
-                        <div class="logo_ac_mob">
-
-                        </div>
+                        <div class="logo_ac_mob"></div>
                     </div>
                     <div class="col-sm-3 col-xl-2 remove">
                         <div class="header_phone">
                             <a href="tel: {{ profile.org_main_phone }}" title="Позвонить">
-                                <p class="text_phone">
-                                    {{ profile.org_main_phone }}
-                                </p>
+                                <p class="text_phone">{{ profile.org_main_phone }}</p>
                             </a>
-                            <p class="text_phone_consultant">
-                                Консультация специалиста
-                            </p>
+                            <p class="text_phone_consultant">Консультация специалиста</p>
                         </div>
                     </div>
                     <div class="col-sm-4 col-xl-2">
                         <div class="feedback_button_header">
-                            <a href="" class="feedback_header" data-toggle="modal" data-target="#modal-statement">
-                                Обратная связь
-                            </a>
+                            <a href=""
+                               class="feedback_header"
+                               data-toggle="modal"
+                               data-target="#modal-statement">Обратная связь</a>
                         </div>
                     </div>
                     <div class="col-sm-2 col-xl-3 remove">
                         <div class="box_logo_3">
                             <img src="{% static '/img/logo_2.png' %}"
-                                title="Лауреат Премии Правительства РФ в области качества 2012 года" alt="">
+                                 title="Лауреат Премии Правительства РФ в области качества 2012 года"
+                                 alt="">
                             <img src="{% static '/img/logo_3.png' %}"
-                                title="Лауреат Премии СНГ 2013 года за достижения в области качества" alt="">
-                            <img src="{% static '/img/logo_4.png' %}" title="Член Международного Института Сварки"
-                                alt="">
+                                 title="Лауреат Премии СНГ 2013 года за достижения в области качества"
+                                 alt="">
+                            <img src="{% static '/img/logo_4.png' %}"
+                                 title="Член Международного Института Сварки"
+                                 alt="">
                         </div>
                     </div>
                     <div class="col-sm-2 col-xl-1">
                         <div class="header_sasv">
                             <img src="{% static '/img/logo_sasv.png' %}"
-                                title="Организация допущена к выполнению работ по аттестации сварочного производства"
-                                class="logo_sasv" alt="">
+                                 title="Организация допущена к выполнению работ по аттестации сварочного производства"
+                                 class="logo_sasv"
+                                 alt="">
                         </div>
                     </div>
-
                 </div>
             </div>
-
-
             {% include 'mainapp/includes/menu-bg-header.html' %}
             <div class="row">
                 <div class="col-xl-12">
                     <div class="headline_bg">
-                        <p class="head_bg_text">
-                            {{ profile.org_short_name }}
-                        </p>
-                        <p class="head_bg_text_two">
-                            {{ profile.org_intro }}
-                        </p>
-
+                        <p class="head_bg_text">{{ profile.org_short_name }}</p>
+                        <p class="head_bg_text_two">{{ profile.org_intro }}</p>
                         <p class="head_bg_text_small_two">
                             {{ profile.org_full_name }} осуществляет деятельность в области аттестации сварочного
                             производства САСв и оценки квалификаций в области сварки.
                         </p>
-                        <p class="head_bg_text_small_two">
-                            {{ profile.org_history }}
-                        </p>
+                        <p class="head_bg_text_small_two">{{ profile.org_history }}</p>
                         <div class="head_bg_box_button">
                             <button class="request">
-                                <a href="" data-toggle="modal" data-target="#modal-statement"
-                                    class="request_button">Подать заявку</a>
+                                <a href=""
+                                   data-toggle="modal"
+                                   data-target="#modal-statement"
+                                   class="request_button">Подать заявку</a>
                             </button>
                             <button class="service">
                                 <a href="#service" class="service_button smoothScroll">Услуги</a>
@@ -87,33 +77,36 @@
                         {% comment %} <div class="text-center">
                                 <a class="btn btn-lg btn-primary" href="" data-toggle="modal" data-target="#modal-competition">ВНИМАНИЕ КОНКУРС</a>
                         </div> {% endcomment %}
-
                         {% comment %} mobile {% endcomment %}
                         <div class="head_bg_box_button_mob">
-                            <p class="button_request"> <button class="request">
-                                    <a href="" data-toggle="modal" data-target="#modal-statement"
-                                        class="request_button">Подать заявку</a>
-                                </button></p>
-                            <p><button class="service">
+                            <p class="button_request">
+                                <button class="request">
+                                    <a href=""
+                                       data-toggle="modal"
+                                       data-target="#modal-statement"
+                                       class="request_button">Подать заявку</a>
+                                </button>
+                            </p>
+                            <p>
+                                <button class="service">
                                     <a href="#service" class="service_button smoothScroll">Услуги</a>
-                                </button></p>
+                                </button>
+                            </p>
                         </div>
                         <p class="sro_np_naks_text">
-                            Наша организация является членом <br>
-                            СРО Ассоциация «НАКС».
+                            Наша организация является членом
+                            <br>
+                            СРО Ассоциация «НАКС»
                         </p>
                         <p class="naks_link">
-                            <a href="http://www.naks.ru" target="_blank"
-                                title="Национальное Агентство Контроля Сварки">www.naks.ru
-                                &nbsp | &nbsp </a>
-                            <a href="http://spks.naks.ru/news/" target="_blank"
-                                title="Совет по профессиональным квалификациям в области сварки">www.spks.naks.ru</a>
+                            <a href="http://www.naks.ru"
+                               target="_blank"
+                               title="Национальное Агентство Контроля Сварки">www.naks.ru
+                            &nbsp | &nbsp </a>
+                            <a href="http://spks.naks.ru/news/"
+                               target="_blank"
+                               title="Совет по профессиональным квалификациям в области сварки">www.spks.naks.ru</a>
                         </p>
-                        <p class="naks_link mb-0 mt-0">
-                            <a href="http://svartex.com/ " target="_blank"
-                                title="Сварочное оборудование">www.svartex.com </a>
-                        </p>
-
                     </div>
                 </div>
             </div>

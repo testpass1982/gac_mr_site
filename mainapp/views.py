@@ -1,20 +1,22 @@
 import json
-from django.shortcuts import render, get_object_or_404, redirect
-from django.http import Http404, JsonResponse, HttpResponseRedirect
+
+from django.conf import settings
 from django.core.exceptions import ValidationError
+from django.core.mail import send_mail
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
+from django.http import Http404, HttpResponseRedirect, JsonResponse
+from django.shortcuts import get_object_or_404, redirect, render
 # from django.contrib import messages
 from django.utils import timezone
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from .models import *
-from .forms import PostForm, ArticleForm, DocumentForm, OrderForm
-from .forms import SendMessageForm, SubscribeForm, AskQuestionForm, SearchRegistryForm
-from .adapters import MessageModelAdapter
-from .message_tracker import MessageTracker
-from .utilites import UrlMaker
-from .registry_import import Importer, data_url
-from django.core.mail import send_mail
-from django.conf import settings
 
+from .adapters import MessageModelAdapter
+from .forms import (ArticleForm, AskQuestionForm, DocumentForm, OrderForm,
+                    PostForm, SearchRegistryForm, SendMessageForm,
+                    SubscribeForm)
+from .message_tracker import MessageTracker
+from .models import *
+from .registry_import import Importer, data_url
+from .utilites import UrlMaker
 
 # Create your views here.
 
@@ -115,7 +117,7 @@ def index(request):
 
     #Вывести ВСЕ объекты из БД
     # posts = Post.objects.all()[:3]
-    posts = Post.objects.filter(publish_on_main_page=True).order_by('-published_date')[:9]
+    posts = Post.objects.filter(publish_on_main_page=True).order_by('number')[:9]
     publications = []
     for post in posts:
         try:

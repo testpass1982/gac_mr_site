@@ -4,15 +4,17 @@ Email: yourname@email.com
 Description: models to site project
 """
 import os
-from django.db import models
-from django.utils import timezone
+
+from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
 from django.core.validators import FileExtensionValidator
-from ckeditor.fields import RichTextField
-from django.utils.text import slugify
+from django.db import models
 from django.urls import reverse
+from django.utils import timezone
+from django.utils.text import slugify
 #using this as a store for weld orgs:
 from picklefield.fields import PickledObjectField
+
 # from django_resized import ResizedImageField
 
 
@@ -48,6 +50,7 @@ class Category(models.Model):
 
 class ContentMixin(models.Model):
     '''base class for Post, Article and Documents'''
+    number = models.PositiveSmallIntegerField(default=0)
     title = models.CharField(u'Название', max_length=200)
     url_code = models.CharField(u'Код ссылки', max_length=30, blank=True, default='НЕ УКАЗАН')
 
