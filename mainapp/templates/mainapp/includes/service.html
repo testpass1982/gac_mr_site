@@ -6,11 +6,8 @@
             <div class="col-xl-1">
                 <div class="left_line_headline"></div>
             </div>
-
             <div class="col-xl-6">
-                <p class="headline_text">
-                    Услуги по аттестации
-                </p>
+                <p class="headline_text">Услуги нашего центра</p>
                 <p class="subtitle">
                     Вы можете
                     подробнее ознакомиться с основными
@@ -19,46 +16,35 @@
                 </p>
             </div>
         </div>
-
         <div class="row" id="service">
             {% for publ in publications %}
-            {% autoescape off %}
-            <div class="col-sm-6 col-xl-4 mb-3 d-flex align-items-stretch">
-                {% comment %} <div class="box_img_service" {% if publ.photo is not None %} style="background: url({{ publ.photo }}) no-repeat;{% endif %}"> {% endcomment %}
-                <div class="box_img_service">
+                {% autoescape off %}
+                    <div class="col-sm-6 col-xl-4 mb-3 d-flex align-items-stretch">
+                        {% comment %} <div class="box_img_service"
+      {% if publ.photo is not None %} style="background: url({{ publ.photo }}) no-repeat;{% endif %}> {% endcomment %}
+                        <div class="box_img_service">
                             <img class="content__pict" src="{{ publ.photo }}" alt="">
-                            <p class="name_service">
-                                {{ publ.post.title }}
-                            </p>
+                            <p class="name_service">{{ publ.post.title }}</p>
                             <div class="line_service_yellow"></div>
                             <button class="more">
-                                <a data-fancybox="" data-src="#trueModal{{ publ.post.pk }}" data-modal="true"
-                                    class="more_button">
-                                    Подробнее
-                                </a>
+                                <a data-fancybox=""
+                                   data-src="#trueModal{{ publ.post.pk }}"
+                                   data-modal="true"
+                                   class="more_button">Подробнее</a>
                             </button>
-                </div>
-                <div class="box_head_serivce">
-                    <p class="info_text_service">
-                        {% comment %} {{ post.text|safe}} {% endcomment %}
-                    </p>
-                    {% include 'mainapp/includes/detail_service.html' %}
-                </div>
-
-            </div>
-            {% endautoescape %}
+                        </div>
+                        <div class="box_head_serivce">
+                            <p class="info_text_service">{% comment %} {{ post.text|safe}} {% endcomment %}</p>
+                            {% include 'mainapp/includes/detail_service.html' %}
+                        </div>
+                    </div>
+                {% endautoescape %}
             {% endfor %}
-
             <div class="box_head_serivce">
-                <p class="info_text_service">
-
-                </p>
+                <p class="info_text_service"></p>
                 {% include 'mainapp/includes/detail_service.html' %}
             </div>
-
         </div>
-
     </div>
-
 </div>
 </div>
