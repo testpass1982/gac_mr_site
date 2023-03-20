@@ -58,10 +58,12 @@
                     <div class="headline_bg">
                         <p class="head_bg_text">{{ profile.org_short_name }}</p>
                         <p class="head_bg_text_two">{{ profile.org_intro }}</p>
+                        {% comment %}
                         <p class="head_bg_text_small_two">
                             {{ profile.org_full_name }} осуществляет деятельность в области аттестации сварочного
                             производства САСв и оценки квалификаций в области сварки.
-                        </p>
+                        </p>  
+                        {% endcomment %}
                         <p class="head_bg_text_small_two">{{ profile.org_history }}</p>
                         <div class="head_bg_box_button">
                             <button class="request">
@@ -85,6 +87,7 @@
                                                     <i class="bi bi-arrow-right-square-fill"></i>
                                                     Заявка на аттестацию персонала
                                                 </a>
+                                                {% comment %}
                                                 <a class="if-you" href="https://ac.naks.ru/org_orders/sm/">
                                                     <i class="bi bi-arrow-right-square-fill"></i>
                                                     Заявка на аттестацию СМ
@@ -96,6 +99,7 @@
                                                     <i class="bi bi-arrow-right-square-fill"></i>
                                                     Заявка на аттестацию СТ
                                                 </a>
+                                                {% endcomment %}
                                             </p>
                                             <p>Если вам необходима регистрация в качестве нового заявителя</p>
                                             <p>
