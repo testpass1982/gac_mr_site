@@ -10,10 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
+import json
 import os
 from pathlib import Path
-import json
-
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -23,14 +22,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '19=%5c1709k9kllx65po)__kf&et-(^6mpl4x7d7o95q@2@zk('
+SECRET_KEY = "19=%5c1709k9kllx65po)__kf&et-(^6mpl4x7d7o95q@2@zk("
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = False
+# DEBUG = False
 DEBUG = True
 
 # ALLOWED_HOSTS = ['ac_gacmr_site.minml.ru']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["*"]
 
 # WORKING_LOCAL = False
 
@@ -52,49 +51,49 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'mainapp',
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "mainapp",
     # 'qualsection',
-    'ckeditor',
-    'ckeditor_uploader',
-    'sass_processor',
-    'captcha',
-    'stdimage',
+    "ckeditor",
+    "ckeditor_uploader",
+    "sass_processor",
+    "captcha",
+    "stdimage",
 ]
 
 FILE_UPLOAD_PERMISSIONS = 0o644
 
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django.middleware.security.SecurityMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = 'ac_gacmr_site.urls'
+ROOT_URLCONF = "ac_gacmr_site.urls"
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-                'mainapp.context_processors.profile_chunks',
-                'mainapp.context_processors.partners',
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.debug",
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
+                "mainapp.context_processors.profile_chunks",
+                "mainapp.context_processors.partners",
                 # 'mainapp.context_processors.profile_import',
                 # 'mainapp.context_processors.services',
                 # 'mainapp.context_processors.basement_news',
@@ -108,37 +107,37 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'ac_gacmr_site.wsgi.application'
+WSGI_APPLICATION = "ac_gacmr_site.wsgi.application"
 
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
     }
 }
 
-EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-EMAIL_FILE_PATH = 'email/messages'
+EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+EMAIL_FILE_PATH = "email/messages"
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
 
@@ -146,9 +145,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LANGUAGE_CODE = 'ru-RU'
+LANGUAGE_CODE = "ru-RU"
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = "UTC"
 
 USE_I18N = True
 
@@ -160,94 +159,128 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = '/static_root/'
+STATIC_URL = "/static_root/"
 # STATIC_URL = '/static/'
 SASS_PROCESSOR_ENABLED = True
 SASS_PROCESSOR_AUTO_INCLUDE = False
-SASS_PROCESSOR_INCLUDE_FILE_PATTERN = r'^.+\.scss$'
+SASS_PROCESSOR_INCLUDE_FILE_PATTERN = r"^.+\.scss$"
 # SASS_OUTPUT_STYLE = 'compact'
 
 SASS_PRECISION = 10
-SASS_ROOT = os.path.join(BASE_DIR, 'assets')
+SASS_ROOT = os.path.join(BASE_DIR, "assets")
 SASS_PROCESSOR_ROOT = SASS_ROOT
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
+STATIC_ROOT = os.path.join(BASE_DIR, "static_root")
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
-    os.path.join(BASE_DIR, 'assets')
-)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"), os.path.join(BASE_DIR, "assets"))
 
 SASS_PROCESSOR_INCLUDE_DIRS = [
-    os.path.join(BASE_DIR, 'assets', 'scss'),
+    os.path.join(BASE_DIR, "assets", "scss"),
 ]
 
 STATICFILES_FINDERS = [
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'sass_processor.finders.CssFinder',
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+    "sass_processor.finders.CssFinder",
 ]
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 
 ####################################
 ##  CKEDITOR CONFIGURATION ##
 ####################################
 
-CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
+CKEDITOR_JQUERY_URL = "https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"
 
-CKEDITOR_UPLOAD_PATH = 'uploads/'
+CKEDITOR_UPLOAD_PATH = "uploads/"
 CKEDITOR_IMAGE_BACKEND = "pillow"
 
 CKEDITOR_CONFIGS = {
-    'default': {
+    "default": {
         # 'toolbar': 'full',
-        'toolbar':
-        [
-            ['Undo', 'Redo',
-             '-', 'Bold', 'Italic', 'Underline',
-             '-', 'Link', 'Unlink', 'Anchor',
-             '-', 'Format',
-             '-', 'Maximize',
-             '-', 'Table',
-             '-', 'Image',
-             '-', 'Source',
-             '-', 'NumberedList', 'BulletedList'
-             ],
-            ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock',
-             '-', 'Font', 'FontSize', 'TextColor',
-             '-', 'Outdent', 'Indent',
-             '-', 'HorizontalRule',
-             '-', 'Blockquote'
-             ],
-             ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord'],
+        "toolbar": [
+            [
+                "Undo",
+                "Redo",
+                "-",
+                "Bold",
+                "Italic",
+                "Underline",
+                "-",
+                "Link",
+                "Unlink",
+                "Anchor",
+                "-",
+                "Format",
+                "-",
+                "Maximize",
+                "-",
+                "Table",
+                "-",
+                "Image",
+                "-",
+                "Source",
+                "-",
+                "NumberedList",
+                "BulletedList",
+            ],
+            [
+                "JustifyLeft",
+                "JustifyCenter",
+                "JustifyRight",
+                "JustifyBlock",
+                "-",
+                "Font",
+                "FontSize",
+                "TextColor",
+                "-",
+                "Outdent",
+                "Indent",
+                "-",
+                "HorizontalRule",
+                "-",
+                "Blockquote",
+            ],
+            ["Cut", "Copy", "Paste", "PasteText", "PasteFromWord"],
         ],
-        'pasteFromWord': True,
-        'pasteFilter': 'semantic-content',
+        "pasteFromWord": True,
+        "pasteFilter": "semantic-content",
         # 'pasteFromWordCleanupFile': 'plugins/pastefromword/filter/default.js',
         # 'pasteFromWordRemoveStyle': True,
         # 'pasteFromWordNumberedHeadingToList': True,
         # 'pasteFromWordPromptCleanup': False,
-        'extraPlugins': ','.join(
+        "extraPlugins": ",".join(
             [
-               'pastefromword',
-               'clipboard',
+                "pastefromword",
+                "clipboard",
             ]
         ),
         # 'skin': 'moono',
-        'allowedContent': True,
+        "allowedContent": True,
         # 'forcePasteAsPlainText': True,
-        'format_tags': 'p;h1;h2;h3;pre',
+        "format_tags": "p;h1;h2;h3;pre",
         # 'contentsCss': ['/static/css/ckeditor_init.css', ],
-        'stylesSet': [{'name': 'Строчный код', 'element': 'code'},
-                      {'name': 'Скрыть для мобильных', 'element': 'span',
-                       'attributes': {'class': 'hide_for_mobile'}},
-                      {'name': 'Монолитный элемент', 'element': 'span',
-                       'attributes': {'style': 'white-space: nowrap;'}},
-                      {'name': 'Адаптивная таблица', 'element': 'div', 'attributes': {'class': 'table-responsive'}}],
-        'fontSize_sizes': '14/14px;15/15px;16/16px;17/17px;18/18px;19/19px;20/20px;'
-        '21/21px;22/22px;23/23px;24/24px;25/25px;26/26px;27/27px;28/28px;36/36px;48/48px;72/72px;1/1px;',
+        "stylesSet": [
+            {"name": "Строчный код", "element": "code"},
+            {
+                "name": "Скрыть для мобильных",
+                "element": "span",
+                "attributes": {"class": "hide_for_mobile"},
+            },
+            {
+                "name": "Монолитный элемент",
+                "element": "span",
+                "attributes": {"style": "white-space: nowrap;"},
+            },
+            {
+                "name": "Адаптивная таблица",
+                "element": "div",
+                "attributes": {"class": "table-responsive"},
+            },
+        ],
+        "fontSize_sizes": "14/14px;15/15px;16/16px;17/17px;18/18px;19/19px;20/20px;"
+        "21/21px;22/22px;23/23px;24/24px;25/25px;26/26px;27/27px;28/28px;36/36px;48/48px;72/72px;1/1px;",
         "removePlugins": "stylesheetparser",
     }
 }
@@ -258,26 +291,28 @@ CKEDITOR_CONFIGS = {
 DJANGORESIZED_DEFAULT_SIZE = [1920, 1080]
 DJANGORESIZED_DEFAULT_QUALITY = 75
 DJANGORESIZED_DEFAULT_KEEP_META = True
-DJANGORESIZED_DEFAULT_FORCE_FORMAT = 'JPEG'
-DJANGORESIZED_DEFAULT_FORMAT_EXTENSIONS = {'JPEG': ".jpg"}
+DJANGORESIZED_DEFAULT_FORCE_FORMAT = "JPEG"
+DJANGORESIZED_DEFAULT_FORMAT_EXTENSIONS = {"JPEG": ".jpg"}
 DJANGORESIZED_DEFAULT_NORMALIZE_ROTATION = True
 
 #####################################
 ### SEND_MAIL_SETTINGS ##############
 #####################################
-#/home/popov/send_mail_secret.json
+# /home/popov/send_mail_secret.json
 
 home = str(Path.home())
 # import pdb; pdb.set_trace()
 # with open(os.path.join('/', 'home', 'popov', 'send_mail_secret.json'), 'r') as f:
-with open(os.path.join(home, 'send_mail_secret.json'), 'r') as f:
+with open(os.path.join(home, "send_mail_secret.json"), "r") as f:
     json_email_settings = f.read()
     email_settings = json.loads(json_email_settings)
-    EMAIL_HOST = email_settings['EMAIL_HOST']
-    EMAIL_PORT = email_settings['EMAIL_PORT']
-    EMAIL_HOST_USER = email_settings['EMAIL_HOST_USER']
-    EMAIL_HOST_PASSWORD = email_settings['EMAIL_HOST_PASSWORD']
+    EMAIL_HOST = email_settings["EMAIL_HOST"]
+    EMAIL_PORT = email_settings["EMAIL_PORT"]
+    EMAIL_HOST_USER = email_settings["EMAIL_HOST_USER"]
+    EMAIL_HOST_PASSWORD = email_settings["EMAIL_HOST_PASSWORD"]
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_USE_SSL = True
+
+from .local_settings import *
