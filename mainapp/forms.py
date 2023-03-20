@@ -124,3 +124,5 @@ class OrderForm(forms.ModelForm):
                 }),
                 # <input type="text" class="form-control form-control-sm" placeholder=""  type="text" id="phone2" required="">
             }
+
+#class Test
