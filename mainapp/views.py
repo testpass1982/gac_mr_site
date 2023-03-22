@@ -85,6 +85,20 @@ def accept_order(request):
             return JsonResponse({"errors": form.errors})
 
 
+def pdn_politics(request):
+    pdn_page = Post.objects.filter(url_code="pdn-politics").first()
+    if not pdn_page:
+        pdn_page = {
+            "title": "no_pdn_politics",
+            "pdn_content": "no_pdn_politics",
+        }
+    context = {
+        "title": "Политика",
+        "pdn_page": pdn_page,
+    }
+    return render(request, "mainapp/pdn_politics.html", context)
+
+
 def index(request):
     """this is mainpage view with forms handler and adapter to messages"""
     # TODO:  сделать когда-нибудь вывод форм на глваную

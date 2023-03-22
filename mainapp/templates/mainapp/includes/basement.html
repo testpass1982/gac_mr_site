@@ -6,14 +6,15 @@
             <div class="row">
                 <div class="col-sm-12 col-xl-4">
                     <div class="logo_footer">
-                        <img src="{{profile.org_footer_logotype.url }}" class="logo_gac_footer" alt="">
+                        <img src="{{ profile.org_footer_logotype.url }}"
+                             class="logo_gac_footer"
+                             alt="">
                     </div>
                     <p class="footer_text_company">
-                       {{ profile.org_full_name }}, являясь членом
+                        {{ profile.org_full_name }}, являясь членом
                         СРО Ассоциация НАКС, начало свою деятельность в 2003 году с аттестации сварочных материалов,
-                        сварочного оборудования и сварочных технологий. 
+                        сварочного оборудования и сварочных технологий.
                     </p>
-
                     <div class="rsps_logo">
                         <a href="http://rsps.site">
                             <img src="{% static '/img/rsps.png' %}" alt="">
@@ -22,39 +23,25 @@
                 </div>
                 <div class="col-sm-2 col-xl-1">
                     <div class="head_info_footer">
-                        <p class="name_info_block">
-                            Новости
-                        </p>
+                        <p class="name_info_block">Новости</p>
                     </div>
                 </div>
-
                 <div class="col-sm-4 col-md-4 col-xl-2">
-
-
                     {% for post in basement_news %}
-                    <div class="box_footer_news">
-                        <a href="{% url 'details' 'post' post.pk %}">
-                            <p class="footer_news">
-                                {{ post.title }}
-                            </p>
-                        </a>
-                        <p class="date_news_footer">
-                            {{ post.published_date|date:"d M. Y"}}
-                        </p>
-                    </div>
+                        <div class="box_footer_news">
+                            <a href="{% url 'details' 'post' post.pk %}">
+                                <p class="footer_news">{{ post.title }}</p>
+                            </a>
+                            <p class="date_news_footer">{{ post.published_date|date:"d M. Y" }}</p>
+                        </div>
                     {% endfor %}
-
-
                 </div>
                 <div class="col-sm-2 col-xl-1">
                     <div class="head_info_footer">
-                        <p class="name_info_block">
-                            Информация
-                        </p>
+                        <p class="name_info_block">Информация</p>
                     </div>
                 </div>
                 <div class="col-sm-4 col-md-4 col-xl-2">
-
                     <div class="box_footer_info">
                         <a href="http://www.naks.ru" target="_blank" class="point_yellow">
                             <p class="footer_info_link">
@@ -66,54 +53,55 @@
                     <div class="box_footer_info">
                         <a href="http://www.bewelder.ru" target="_blank" class="point_yellow">
                             <p class="footer_info_link">
-                                Поиск работы <br> в области сварки
+                                Поиск работы
+                                <br>
+                                в области сварки
                             </p>
                         </a>
                     </div>
                     <div class="box_footer_info">
                         <a href="http://svarka.naks.ru/" target="_blank" class="point_yellow">
                             <p class="footer_info_link">
-                                Журнал сварка <br> и диагностика
+                                Журнал сварка
+                                <br>
+                                и диагностика
                             </p>
                         </a>
                     </div>
                     <div class="enter_system_edo">
-                        <a href="https://ac.naks.ru/" class="enter_system_link" target="_blank">
-                            Войти в систему ЭДО</a>
+                        <a href="https://ac.naks.ru/" class="enter_system_link" target="_blank">Войти в систему ЭДО</a>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-6 col-xl-2">
                     <div class="feedback_button_footer">
-                        <a href="" class="feedback_footer" data-toggle="modal" data-target="#modal-statement">
-                            Обратная связь
-                        </a>
+                        <a href=""
+                           class="feedback_footer"
+                           data-toggle="modal"
+                           data-target="#modal-statement">Обратная связь</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
     <div class="basement_footer">
         <div class="container">
             <div class="line_footer_basement"></div>
             <div class="box_basement">
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-4 col-xl-5 ">
-                        <p class="basement_text_prava_kompany">
-                            © 2020 {{ profile.org_short_name }} &nbsp;| &nbsp; Все права защищены
-                        </p>
+                        <p class="basement_text_prava_kompany">© 2020 {{ profile.org_short_name }} &nbsp;| &nbsp; Все права защищены</p>
                     </div>
                     <div class="col-xl-3 col-md-2">
-                        <a href="{% url 'political' %}" class="political_konf" target="_blank">
-                            Политика конфиденциальности
-                        </a>
+                        <a href="{% url 'pdn-politics' %}"
+                           class="political_konf"
+                           target="_blank">Политика конфиденциальности</a>
                     </div>
-
                     <div class="col-xl-4">
                         <div class="razrabotano_basement_footer">
-                            <a href="http://www.naks.ru/naksmedia/" target="_blank" class="razrabotano__v__naks__media">
-                                Разработано в - НАКС Медиа</a>
-
+                            <a href="http://www.naks.ru/naksmedia/"
+                               target="_blank"
+                               class="razrabotano__v__naks__media">
+                            Разработано в - НАКС Медиа</a>
                         </div>
                     </div>
                 </div>
