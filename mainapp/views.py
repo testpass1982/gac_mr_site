@@ -132,8 +132,9 @@ def index(request):
             print("new_order", new_order)
         else:
             print("errors->", form.errors)
-    # docs = Document.objects.filter(
-    #     publish_on_main_page=True).order_by('-created_date')[:3]
+    certificates = Document.objects.filter(publish_on_main_page=True).order_by(
+        "-created_date"
+    )[:3]
 
     # main_page_news = Post.objects.filter(
     #     publish_on_main_page=True).order_by('-published_date')[:7]
@@ -168,6 +169,7 @@ def index(request):
         "title": title,
         "publications": publications,
         "form": form,
+        "certificates": certificates,
         # 'docs': docs,
         # 'articles': main_page_articles,
         # 'send_message_form': SendMessageForm(),
