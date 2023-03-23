@@ -134,7 +134,7 @@ def index(request):
             print("errors->", form.errors)
     certificates = Document.objects.filter(publish_on_main_page=True).order_by(
         "-created_date"
-    )[:3]
+    )[:10]
 
     # main_page_news = Post.objects.filter(
     #     publish_on_main_page=True).order_by('-published_date')[:7]
