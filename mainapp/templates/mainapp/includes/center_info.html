@@ -1,0 +1,129 @@
+{% load static %}
+{% load link_holders %}
+{% if center_photos %}
+    <div class="box_background">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-1">
+                    <div class="left_line_headline"></div>
+                </div>
+                <div class="col-xl-6">
+                    <p class="headline_text">Фотографии центра</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div id="owl-gallery" class="owl-carousel owl-gallery">
+                        {% for photo in center_photos %}
+                            <a href="{{ photo.image.full.url }}" data-fancybox="images">
+                                <img src="{{ photo.image.thumb.url }}" class="img-fluid" />
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}
+{% comment %}
+ <div class="box_white_background" id="center">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-1">
+                <div class="left_line_headline"></div>
+            </div>
+            <div class="col-xl-6">
+                <p class="headline_text">О центре</p>
+                <p class="subtitle">Подробная информация о нашем центре, свидетельства, реестры</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-6">
+                <div class="box_head_info_center">
+                    <p class="head_info_center">{{ profile.org_short_name }}</p>
+                    <p class="head_info_center">{{ profile.org_intro }}</p>
+                </div>
+                <div class="box_info_center_small_text">
+                    <p class="info_center_small_text">
+                        {{ profile.org_short_name }} является членом <a href="http://naks.ru" target="_blank">СРО Ассоциация
+                        "Национальное Агентство Контроля Сварки"</a> и осуществляют деятельность в области аттестации
+                        сварщиков и специалистов сварочного производства, аттестации сварочных материалов, оборудования и
+                        технологий.
+                        Аттестационные испытания проводятся с целью проверки наличия у
+                        организации-заявителя
+                        технических и организационных возможностей, а так же квалифицированных кадров для производства
+                        сварочных работ по аттестуемой технологии, а также проверки, что сварные соединения (наплавки),
+                        выполненные в условиях конкретного производства по аттестуемой технологии, соответствуют
+                        требованиям Федеральных норм и правил.
+                    </p>
+                </div>
+                <div class="head_service_info_text">
+                    <div class="box_link_service_text">
+                        <ul class="link_list_service">
+                            <a href="{% url 'center' %}">
+                                <li class="link_service_text">Подробнее о центре</li>
+                            </a>
+                            <a href="http://www.naks.ru/assp/reestrac/index.php?ID=2230779" target="_blank">
+                                <li class="link_service_text">Центр по аттестации персонала сварочного производства в реестре НАКС</li>
+                            </a>
+                            <a href="http://www.naks.ru/specpod/racsp/index.php?ID=4807284" target="_blank">
+                                <li class="link_service_text">Центр специальной подготовки в реестре НАКС</li>
+                            </a>
+                            <a href="http://www.naks.ru/asm/racsm/index.php?ID=1087" target="_blank">
+                                <li class="link_service_text">Центр по аттестации сварочных материалов в реестре НАКС</li>
+                            </a>
+                            <a href="http://www.naks.ru/aso/racso/index.php?ID=414509" target="_blank">
+                                <li class="link_service_text">Центр по аттестации сварочого оборудования в реестре НАКС</li>
+                            </a>
+                            <a href="http://www.naks.ru/ast/racst/index.php?ID=414570" target="_blank">
+                                <li class="link_service_text">Центр по аттестации сварочных технологий в реестре НАКС</li>
+                            </a>
+                            <a href="http://spks.naks.ru/cert/reestr_centers/detail.php?ID=2712368" target="_blank">
+                                <li class="link_service_text">Центр оценки квалификации Совета по профессиональным квалификациям в области сварки</li>
+                            </a>
+                            <a href="{% url 'profstandarti' %}">
+                                <li class="link_service_text">Профстандарты в области сварки</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="box_img_center">
+                    <p class="imglist" style="max-width: 1000px;">
+                        <a href="{% static 'img/Img_center_1.jpg' %}" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                            <img src="{% static 'img/Img_center_1_min.jpg' %}" class="img-fluid img_center mr-2"/>
+                        </a>
+                        <a href="{% static 'img/Img_center_2_min.JPG' %}" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                            <img src="{% static 'img/Img_center_2_min.JPG' %}" class="img-fluid img_center mr-2"/>
+                        </a>
+                        <a href="{% static 'img/Img_center_3.JPG' %}" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                            <img src="{% static 'img/Img_center_3_min.JPG' %}" class="img-fluid img_center mr-2"/>
+                        </a>
+                        <a href="{% static 'img/Img_center_4.JPG' %}" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                            <img src="{% static 'img/Img_center_4_min.JPG' %}" class="img-fluid img_center mr-2"/>
+                        </a>
+                        <a href="{% static 'img/Img_center_5.JPG' %}" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                            <img src="{% static 'img/Img_center_5_min.JPG' %}" class="img-fluid img_center mr-2"/>
+                        </a>
+                        <a href="{% static 'img/Img_center_6.JPG' %}" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                            <img src="{% static 'img/Img_center_6_min.JPG' %}" class="img-fluid img_center mr-2"/>
+                        </a>
+                        <a href="{% static 'img/Img_center_7.JPG' %}" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                            <img src="{% static 'img/Img_center_7_min.JPG' %}" class="img-fluid img_center mr-2"/>
+                        </a>
+                        <a href="{% static 'img/Img_center_8.JPG' %}" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                            <img src="{% static 'img/Img_center_8_min.JPG' %}" class="img-fluid img_center mr-2"/>
+                        </a>
+                        <a href="{% static 'img/Img_center_9.JPG' %}" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                            <img src="{% static 'img/Img_center_9_min.JPG' %}" class="img-fluid img_center mr-2"/>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+{% endcomment %}
+</div>
+</div>

@@ -135,6 +135,7 @@ def index(request):
     certificates = Document.objects.filter(publish_on_main_page=True).order_by(
         "-created_date"
     )[:10]
+    center_photos = CenterPhoto.objects.all().order_by("number")
 
     # main_page_news = Post.objects.filter(
     #     publish_on_main_page=True).order_by('-published_date')[:7]
@@ -158,7 +159,7 @@ def index(request):
             )
         except Exception as e:
             publications.append({"post": post, "photo": None})
-    print("PUBLICACTIONS", publications)
+    # print("PUBLICACTIONS", publications)
     # main_page_articles = Article.objects.filter(
     #     publish_on_main_page=True).order_by('-published_date')[:3]
 
@@ -170,6 +171,7 @@ def index(request):
         "publications": publications,
         "form": form,
         "certificates": certificates,
+        "center_photos": center_photos,
         # 'docs': docs,
         # 'articles': main_page_articles,
         # 'send_message_form': SendMessageForm(),

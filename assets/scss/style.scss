@@ -14,3 +14,16 @@
 @import "_profstandarti.scss";
 @import "_center.scss";
 @import "_ocenka_details.scss";
+
+.owl-gallery {
+  height: 50vh;
+  .owl-stage {
+    height: 50vh;
+    display: flex;
+  }
+  .owl-item img {
+    width: auto;
+    height: 80%;
+    object-fit: cover;
+  }
+}

@@ -1,5 +1,5 @@
 {% load static %}
-{% if certificates %}
+{% if center_photos %}
     <div class="box_background">
         <div class="container">
             <div class="row">
@@ -7,16 +7,16 @@
                     <div class="left_line_headline"></div>
                 </div>
                 <div class="col-xl-6">
-                    <p class="headline_text">Разрешительные документы</p>
-                    <p class="subtitle">Документальное подтверждение нашей компетентности</p>
+                    <p class="headline_text">Фотографии нашего центра</p>
+                    <p class="subtitle">123</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xl-12">
-                    <div id="owl-certs" class="owl-carousel owl-theme">
-                        {% for cert in certificates %}
-                            <a href="{{ cert.document.url }}" data-fancybox="images">
-                                <img src="{{ cert.preview.url }}" class="img-fluid" />
+                    <div class="owl-carousel-gallery owl-theme">
+                        {% for photo in center_photos %}
+                            <a href="{{ photo.image.full.url }}" data-fancybox="images">
+                                <img src="{{ photo.image.thumb.url }}" class="img-fluid" />
                             </a>
                         {% endfor %}
                     </div>

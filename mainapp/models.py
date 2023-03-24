@@ -14,13 +14,13 @@ from django.utils import timezone
 from django.utils.text import slugify
 # using this as a store for weld orgs:
 from picklefield.fields import PickledObjectField
+from stdimage import StdImageField
 
 # from django_resized import ResizedImageField
 
 
 # Create your models here.
 class Tag(models.Model):
-
     name = models.CharField(max_length=64)
 
     class Meta:
@@ -212,6 +212,18 @@ class PostPhoto(models.Model):
 
     def __str__(self):
         return "{} - {}".format(self.post, self.image)
+
+
+class CenterPhoto(models.Model):
+    number = models.PositiveSmallIntegerField(default=0)
+    title = models.CharField(max_length=50)
+    image = StdImageField(
+        upload_to="center_photos/",
+        variations={
+            "thumb": {"width": 400, "height": 200},
+            "full": {"width": 800, "height": 400},
+        },
+    )
 
 
 class Message(models.Model):

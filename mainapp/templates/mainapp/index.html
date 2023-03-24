@@ -1,15 +1,16 @@
 {% extends 'mainapp/base.html' %}
 {% load static %}
 {% block content  %}
-    {% include 'mainapp/includes/modal-window.html' %}
-    {% include 'mainapp/includes/service.html' %}
+    {% include "mainapp/includes/modal-window.html" %}
+    {% include "mainapp/includes/service.html" %}
+    {% include "mainapp/includes/center_info.html" %}
     {% comment %}
-      {% include 'mainapp/includes/center-info.html' %}
+    {% include 'mainapp/includes/gallery.html' %}
     {% endcomment %}
-    {% include 'mainapp/includes/evidence.html' %}
+    {% include "mainapp/includes/evidence.html" %}
     {% comment %}
       {% include 'mainapp/includes/certified.html' %}
     {% endcomment %}
-    {% include 'mainapp/includes/partners.html' %}
-    {% include 'mainapp/includes/contacts.html' %}
+    {% include "mainapp/includes/partners.html" %}
+    {% include "mainapp/includes/contacts.html" %}
 {% endblock  %}
